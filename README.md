@@ -45,6 +45,43 @@ modelos-handson/
 3. Quando tiver dúvidas, faça perguntas ao agente — ele orientará seu aprendizado.
 4. Se preferir uma solução pronta, peça explicitamente; caso contrário, receberá pistas e orientações.
 
+## Ambiente isolado com uv (Arch/CachyOS)
+
+No diretório do projeto, crie e ative um ambiente virtual com `uv`:
+
+```bash
+cd modelos-handson
+uv venv --python 3.12 .venv
+```
+
+Ative o ambiente:
+
+```bash
+# fish
+source .venv/bin/activate.fish
+
+# bash/zsh
+source .venv/bin/activate
+```
+
+Instale as dependências fixadas no `requirements.txt`:
+
+```bash
+uv pip install -r requirements.txt
+```
+
+Execute o script:
+
+```bash
+python Linear-Regression.py
+```
+
+Opcional (sem ativar o ambiente):
+
+```bash
+uv run --python .venv/bin/python Linear-Regression.py
+```
+
 ## Tecnologias
 
 - Python 3.x
