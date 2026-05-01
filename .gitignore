@@ -1,0 +1,40 @@
+# Environment
+.venv/
+.env
+*.pyc
+__pycache__/
+*.egg-info/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.jupyter/
+
+# Data
+data/raw/
+data/interim/
+data/processed/
+*.csv
+*.parquet
+*.pkl
+*.pickle
+
+# Reports
+reports/figures/
+reports/tables/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
