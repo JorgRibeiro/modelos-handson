@@ -67,13 +67,13 @@ Após completar este capítulo, você deverá:
 
 - [Documentação scikit-learn: Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
 - [Documentação scikit-learn: K-Neighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html)
-- Capítulo 01 do livro Hands-On ML (seções 1-7)
+- Capítulo 01 do livro Hands-On ML
 
 ## Status de Conclusão
 
 - [x] Conceitos fundamentais cobertos
 - [x] Primeiro experimento implementado
 - [x] Todos os exercícios completos
-- [x] Todos os notebooks do capítulo finalizados
+- [ ] Todos os notebooks do capítulo finalizados
 
 **Última atualização**: 2 de maio de 2026
