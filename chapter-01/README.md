@@ -17,8 +17,6 @@ Compreender os fundamentos de Machine Learning, tipos de sistemas e arquiteturas
 | Experimento | Descrição | Dificuldade |
 |-------------|-----------|------------|
 | `exp-01-linear-regression.ipynb` | Regressão Linear e K-Nearest Neighbors com dados reais (Life Satisfaction) | Iniciante |
-| *exp-02-* | *(Planejado)* | |
-| *exp-03-* | *(Planejado)* | |
 
 ## Roteiro de Estudo Recomendado
 
@@ -61,11 +59,9 @@ Após completar este capítulo, você deverá:
 - ✅ Treinar e fazer predições com modelos simples (Linear Regression, KNN)
 - ✅ Visualizar dados e resultados com Matplotlib/Pandas
 
-## Exercícios (Planejado)
+## Exercícios
 
-- [ ] **Exercício 1.1**: Comparar performance de Linear Regression vs KNN em dados sintéticos
-- [ ] **Exercício 1.2**: Explorar overfitting com diferentes valores de `n_neighbors`
-- [ ] **Exercício 1.3**: Aplicar modelos a novo dataset (ex.: dataset de preços de casas)
+- **Perguntas do Capítulo 1**: Todas as perguntas e respostas estão documentadas em [Respostas.md](Respostas.md). O arquivo foi organizado em um formato interativo de **Flashcards** (expansível). Nele, você encontrará suas respostas corrigidas e aprofundadas (com exemplos e palavras-chave), além das respostas oficiais do autor do livro. É uma excelente ferramenta de revisão e consulta rápida.
 
 ## Recursos Adicionais
 
@@ -77,7 +73,7 @@ Após completar este capítulo, você deverá:
 
 - [x] Conceitos fundamentais cobertos
 - [x] Primeiro experimento implementado
-- [ ] Todos os exercícios completos
-- [ ] Todos os notebooks do capítulo finalizados
+- [x] Todos os exercícios completos
+- [x] Todos os notebooks do capítulo finalizados
 
-**Última atualização**: 1 de maio de 2026
+**Última atualização**: 2 de maio de 2026
