@@ -1,112 +1,132 @@
-# Capítulo 02: Projeto de Aprendizado de Máquina de Ponta a Ponta
+# Capitulo 02: Projeto de Aprendizado de Maquina de Ponta a Ponta
 
 ## Objetivo
 
-Aplicar um fluxo completo de aprendizado de máquina, desde a obtenção dos dados até a avaliação final e persistência do modelo, usando o conjunto de dados imobiliários California Housing Prices.
+Aplicar um fluxo completo de aprendizado de maquina usando o conjunto California Housing Prices: obter dados, criar conjunto de teste, explorar padroes, preparar atributos, treinar modelos, ajustar hiperparametros, avaliar no teste final e persistir o modelo.
 
-## Pré-requisitos
+Este capitulo transforma os conceitos do Capitulo 1 em um projeto pratico com encadeamentos reutilizaveis do Scikit-Learn.
 
-- Conceitos do Capítulo 01: tipos de aprendizado de máquina, sobreajuste, subajuste e avaliação de modelos.
-- Familiaridade com Pandas, NumPy, Scikit-Learn e Matplotlib.
-- Jupyter Lab com ambiente Python adequado ativado.
+## Pre-requisitos
 
-## Estrutura do Capítulo
+- Conceitos do Capitulo 1: tipos de aprendizado, generalizacao, sobreajuste, subajuste e avaliacao.
+- Familiaridade com Pandas, NumPy, Matplotlib e Scikit-Learn.
+- Ambiente `.venv` ativo com as dependencias do projeto instaladas.
 
-### Notebooks
+## Estrutura do Capitulo
 
-| Experimento | Descrição | Dificuldade |
-|-------------|-----------|------------|
-| `02_Projeto_End_to_End_de_Machine_Learning.ipynb` | Fluxo fim a fim: configuração, download dos dados, análise exploratória, criação do conjunto de teste, limpeza, atributos categóricos, escalonamento, transformadores personalizados, encadeamentos de transformação, treinamento, validação cruzada, busca em grade, busca aleatória, avaliação no teste e persistência com `joblib`. | Intermediário |
-| `02_Resposta_exercicio1.ipynb` | Testa `SVR` como novo regressor usando `GridSearchCV`. | Intermediário |
-| `02_Resposta_exercicio2.ipynb` | Substitui busca em grade por `RandomizedSearchCV` para explorar melhor os hiperparâmetros do `SVR`. | Intermediário |
-| `02_Resposta_exercicio3.ipynb` | Adiciona `SelectFromModel` ao pipeline para selecionar atributos antes do regressor final. | Intermediário |
-| `02_Resposta_exercicio4.ipynb` | Cria um transformador supervisionado que usa `KNeighborsRegressor` para gerar uma característica geográfica baseada em `latitude` e `longitude`. | Avançado |
-| `02_Resposta_exercicio5.ipynb` | Usa `GridSearchCV` para explorar opções de preparação dentro do pipeline, incluindo parâmetros do transformador geográfico. | Avançado |
-| `02_Resposta_exercicio6.ipynb` | Implementa `StandardScalerClone` com `fit()`, `transform()`, `inverse_transform()` e suporte a nomes de atributos. | Avançado |
-| `Respostas.md` | Resumo comparativo dos exercícios, com ponto principal de cada implementação e avaliação qualitativa. | Leitura |
+### Notebook principal
 
-## Roteiro de Estudo Recomendado
+| Arquivo | Conteudo | Dificuldade |
+|---------|----------|-------------|
+| `02_Projeto_End_to_End_de_Machine_Learning.ipynb` | Projeto completo: configuracao, download dos dados, analise exploratoria, conjunto de teste, limpeza, atributos categoricos, escalonamento, transformadores personalizados, pipelines, treinamento, validacao cruzada, `GridSearchCV`, `RandomizedSearchCV`, avaliacao final e persistencia com `joblib`. | Intermediario |
 
-1. **Leitura**: Capítulo 02 do livro (Project Checklist).
-2. **Prática**:
-   - Acompanhe e execute o notebook `02_Projeto_End_to_End_de_Machine_Learning.ipynb`.
-   - Entenda a criação do conjunto de teste e a amostragem estratificada por categoria de renda.
-   - Analise os transformadores personalizados e os encadeamentos de pré-processamento.
-   - Compare os resultados de Regressão Linear, Árvore de Decisão e Floresta Aleatória.
-   - Observe a diferença entre erro de treino, erro de validação cruzada e erro final no conjunto de teste.
-   - Execute os exercícios em ordem, pois os exercícios 4 e 5 reaproveitam ideias dos exercícios anteriores.
-3. **Reflexão**:
-   - Como os encadeamentos ajudam a evitar vazamento de dados?
-   - Qual a diferença entre busca em grade e busca aleatória?
-   - Por que o conjunto de teste só deve ser usado no final?
-   - Quando vale a pena otimizar a preparação dos dados, e não apenas o modelo final?
-   - Uma característica nova precisa necessariamente melhorar o RMSE para ser útil como aprendizado?
+### Exercicios
 
-## Roteiro dos Exercícios
+| Ordem | Arquivo | Foco | Dificuldade |
+|-------|---------|------|-------------|
+| 1 | `02_Resposta_exercicio1.ipynb` | Testar `SVR` com `GridSearchCV`. | Intermediario |
+| 2 | `02_Resposta_exercicio2.ipynb` | Substituir grade fixa por `RandomizedSearchCV`. | Intermediario |
+| 3 | `02_Resposta_exercicio3.ipynb` | Inserir `SelectFromModel` antes do regressor final. | Intermediario |
+| 4 | `02_Resposta_exercicio4.ipynb` | Criar um transformador supervisionado com `KNeighborsRegressor` para atributos geograficos. | Avancado |
+| 5 | `02_Resposta_exercicio5.ipynb` | Otimizar parametros da preparacao e do modelo dentro do pipeline. | Avancado |
+| 6 | `02_Resposta_exercicio6.ipynb` | Implementar `StandardScalerClone` compativel com a API do Scikit-Learn. | Avancado |
+| - | `Respostas.md` | Comparacao comentada dos exercicios e resultados. | Revisao |
 
-| Ordem | Arquivo | Foco | Observação |
-|-------|---------|------|------------|
-| 1 | `02_Resposta_exercicio1.ipynb` | `SVR` com `GridSearchCV` | Base para comparar busca em grade e busca aleatória. |
-| 2 | `02_Resposta_exercicio2.ipynb` | `RandomizedSearchCV` | Mais flexível para espaços grandes de hiperparâmetros. |
-| 3 | `02_Resposta_exercicio3.ipynb` | `SelectFromModel` | Seleciona atributos, mas pode não melhorar o resultado. |
-| 4 | `02_Resposta_exercicio4.ipynb` | Transformador com KNN | Cria uma característica supervisionada a partir de localização. |
-| 5 | `02_Resposta_exercicio5.ipynb` | Preparação com `GridSearchCV` | Ajusta parâmetros internos do pipeline de preparação. |
-| 6 | `02_Resposta_exercicio6.ipynb` | API de transformadores | Recria uma versão didática do `StandardScaler`. |
+## Fluxo do Notebook Principal
 
-## Como Executar os Notebooks
+1. **Obter os dados**
+   - Baixa e extrai `housing.tgz`.
+   - Carrega os dados em um `DataFrame`.
+
+2. **Inspecionar a estrutura**
+   - Analisa colunas, tipos, valores ausentes e distribuicoes.
+   - Examina `ocean_proximity` como atributo categorico.
+
+3. **Criar conjunto de teste**
+   - Separa teste antes da exploracao detalhada.
+   - Usa amostragem estratificada com base em categorias de renda.
+
+4. **Explorar e visualizar**
+   - Gera visualizacoes geograficas.
+   - Analisa correlacoes com `median_house_value`.
+   - Cria combinacoes de atributos como quartos por residencia e pessoas por residencia.
+
+5. **Preparar dados**
+   - Trata valores ausentes.
+   - Codifica categorias com one-hot encoding.
+   - Escalona atributos numericos.
+   - Cria transformadores personalizados.
+   - Organiza tudo com `Pipeline` e `ColumnTransformer`.
+
+6. **Treinar e avaliar modelos**
+   - Compara regressores simples e modelos mais flexiveis.
+   - Usa validacao cruzada para medir generalizacao.
+
+7. **Ajustar hiperparametros**
+   - Usa `GridSearchCV` para uma busca sistematica.
+   - Usa `RandomizedSearchCV` para explorar espacos maiores.
+   - Analisa importancia de atributos.
+
+8. **Avaliar e persistir**
+   - Avalia o modelo final no conjunto de teste.
+   - Salva o pipeline completo com `joblib`.
+
+## Resultados dos Exercicios
+
+| Exercicio | Abordagem | Melhor validacao | Teste final | Leitura rapida |
+|-----------|-----------|------------------|-------------|----------------|
+| 1 | `SVR` + `GridSearchCV` | RMSE 78.666 | RMSE 77.065 | Grade pequena ficou limitada. |
+| 2 | `SVR` + `RandomizedSearchCV` | RMSE 55.805 | RMSE 57.198 | Melhor resultado entre os exercicios. |
+| 3 | `SelectFromModel` + `SVR` | RMSE 56.159 | RMSE 57.219 | Selecao de atributos nao melhorou o exercicio 2. |
+| 4 | KNN geografico como caracteristica | RMSE 104.866 | RMSE 101.973 | Ideia didatica, mas resultado fraco. |
+| 5 | Preparacao com `GridSearchCV` | RMSE 72.448 | RMSE 70.495 | Melhorou o KNN geografico, mas nao superou o exercicio 2. |
+| 6 | `StandardScalerClone` | Testes passaram | Nao se aplica | Exercicio de compatibilidade com a API. |
+
+Para os comentarios completos, consulte `Respostas.md`.
+
+## Como Executar
+
+No diretorio `modelos-handson`, ative o ambiente e abra o Jupyter Lab:
 
 ```bash
-# Ativar ambiente
-source ../.venv/bin/activate
-
-# Iniciar Jupyter Lab
+source .venv/bin/activate
 jupyter lab
 ```
 
-Se estiver usando o shell Fish, ative o ambiente com:
+Se estiver usando Fish:
 
 ```fish
-source ../.venv/bin/activate.fish
+source .venv/bin/activate.fish
+jupyter lab
 ```
+
+Depois abra:
+
+```text
+chapter-02/02_Projeto_End_to_End_de_Machine_Learning.ipynb
+```
+
+Os notebooks de exercicios podem ser executados em ordem, de `02_Resposta_exercicio1.ipynb` ate `02_Resposta_exercicio6.ipynb`.
 
 ## Resultados Esperados
 
-Após completar este capítulo, você deverá ser capaz de:
+Ao concluir este capitulo, voce devera ser capaz de:
 
-- ✅ Realizar análise exploratória de dados (EDA) focada em Machine Learning.
-- ✅ Criar um conjunto de teste com amostragem estratificada.
-- ✅ Tratar dados ausentes, valores atípicos e criar novos atributos.
-- ✅ Criar encadeamentos do Scikit-Learn para padronizar transformações.
-- ✅ Treinar, avaliar e otimizar múltiplos modelos com `GridSearchCV` e `RandomizedSearchCV`.
-- ✅ Avaliar o modelo final no conjunto de teste e salvá-lo com `joblib`.
+- Montar um fluxo completo de ML para regressao.
+- Criar conjuntos de treino e teste com amostragem estratificada.
+- Fazer EDA orientada a modelagem.
+- Criar atributos derivados e transformadores personalizados.
+- Usar `Pipeline` e `ColumnTransformer` para evitar vazamento de dados.
+- Comparar modelos com validacao cruzada.
+- Ajustar hiperparametros com `GridSearchCV` e `RandomizedSearchCV`.
+- Avaliar o modelo final apenas no conjunto de teste.
+- Persistir o pipeline final com `joblib`.
 
-## Resultados dos Exercícios
+## Status de Conclusao
 
-Após a execução completa dos notebooks de exercícios, os principais resultados foram:
+- [x] Notebook principal estruturado ate a persistencia do modelo.
+- [x] Exercicios 1 a 6 separados em notebooks proprios.
+- [x] `Respostas.md` atualizado com comparacao numerica.
+- [x] README atualizado com a estrutura real do capitulo.
 
-| Exercício | Abordagem | Melhor validação | Teste final | Leitura rápida |
-|-----------|-----------|------------------|-------------|----------------|
-| 1 | `SVR` + `GridSearchCV` | RMSE 78.666 | RMSE 77.065 | Grade pequena ficou limitada. |
-| 2 | `SVR` + `RandomizedSearchCV` | RMSE 55.805 | RMSE 57.198 | Melhor resultado entre os exercícios. |
-| 3 | `SelectFromModel` + `SVR` | RMSE 56.159 | RMSE 57.219 | Seleção de atributos não melhorou o exercício 2. |
-| 4 | KNN geográfico como característica | RMSE 104.866 | RMSE 101.973 | Ideia didática, mas resultado fraco. |
-| 5 | Preparação com `GridSearchCV` | RMSE 72.448 | RMSE 70.495 | Melhorou o KNN geográfico, mas não superou o exercício 2. |
-| 6 | `StandardScalerClone` | Testes passaram | Não se aplica | Exercício de compatibilidade com a API. |
-
-Para a comparação comentada, veja `Respostas.md`.
-
-## Exercícios
-
-- **Resumo comparativo**: consulte `Respostas.md` para ver o ponto principal de cada exercício e uma comparação simples entre as abordagens.
-- **Notebooks práticos**: os exercícios 1 a 6 estão em notebooks separados para manter o notebook principal limpo.
-- **Soluções finais do livro**: permanecem fora do notebook principal, seguindo a organização dos demais capítulos.
-
-## Status de Conclusão
-
-- [ ] Conceitos fundamentais revisados.
-- [x] Notebook principal estruturado até a persistência do modelo.
-- [x] Exercícios 1 a 6 separados em notebooks próprios.
-- [x] `Respostas.md` atualizado com resumo e comparação.
-- [x] Revisão final dos resultados numéricos após execução completa dos exercícios.
-
-**Última atualização**: Maio de 2026
+**Ultima atualizacao**: 7 de maio de 2026

@@ -1,83 +1,121 @@
 # Modelos Hands-On ML
 
-Implementações práticas e exercícios do livro **"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"** de Aurélien Géron.
+Implementacoes praticas, anotacoes e exercicios do livro **"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"**, de Aurelien Geron.
+
+O projeto esta organizado por capitulos. Cada capitulo contem notebooks executaveis, respostas de exercicios e um README proprio com roteiro de estudo.
 
 ## Estrutura do Projeto
 
-Este repositório está organizado por capítulos, cada um com seus próprios notebooks e guias de estudo.
+```text
+modelos-handson/
+├── chapter-01/
+│   ├── 01_Aprendizado_de_Maquina.ipynb
+│   ├── Respostas.md
+│   └── README.md
+├── chapter-02/
+│   ├── 02_Projeto_End_to_End_de_Machine_Learning.ipynb
+│   ├── 02_Resposta_exercicio*.ipynb
+│   ├── Respostas.md
+│   └── README.md
+├── chapter-03/
+├── ...
+├── chapter-19/
+├── requirements.txt
+└── README.md
+```
 
-### Capítulos
+## Capítulos
 
-| # | Capítulo | Status |
-|---|----------|--------|
-| [01](chapter-01/README.md) | The Machine Learning Landscape | ✅ Em andamento |
-| [02](chapter-02/README.md) | End-to-End Machine Learning Project | ⏳ Planejado |
-| [03](chapter-03/README.md) | Classification | ⏳ Planejado |
-| [04](chapter-04/README.md) | Training Linear Models | ⏳ Planejado |
-| [05](chapter-05/README.md) | Support Vector Machines | ⏳ Planejado |
-| [06](chapter-06/README.md) | Decision Trees | ⏳ Planejado |
-| [07](chapter-07/README.md) | Ensemble Learning and Random Forests | ⏳ Planejado |
-| [08](chapter-08/README.md) | Dimensionality Reduction | ⏳ Planejado |
-| [09](chapter-09/README.md) | Unsupervised Learning | ⏳ Planejado |
-| [10](chapter-10/README.md) | Neural Nets with Keras | ⏳ Planejado |
-| [11](chapter-11/README.md) | Training Deep Neural Networks | ⏳ Planejado |
-| [12](chapter-12/README.md) | Custom Models and Training with TensorFlow | ⏳ Planejado |
-| [13](chapter-13/README.md) | Loading and Preprocessing Data | ⏳ Planejado |
-| [14](chapter-14/README.md) | Deep Computer Vision with CNNs | ⏳ Planejado |
-| [15](chapter-15/README.md) | Processing Sequences using RNNs and CNNs | ⏳ Planejado |
-| [16](chapter-16/README.md) | NLP with RNNs and Attention | ⏳ Planejado |
-| [17](chapter-17/README.md) | Autoencoders, GANs, and Diffusion Models | ⏳ Planejado |
-| [18](chapter-18/README.md) | Reinforcement Learning | ⏳ Planejado |
-| [19](chapter-19/README.md) | Training and Deploying at Scale | ⏳ Planejado |
+| # | Capítulo | Conteudo principal | Status |
+|---|----------|--------------------|--------|
+| [01](chapter-01/README.md) | The Machine Learning Landscape | Fundamentos de ML, tipos de aprendizado, generalizacao, sobreajuste, subajuste, regressao linear e regularizacao. | ✅ Concluido |
+| [02](chapter-02/README.md) | End-to-End Machine Learning Project | Projeto completo com California Housing Prices, EDA, pipelines, validacao cruzada, busca de hiperparametros, avaliacao final e persistencia. | ✅ Concluido |
+| [03](chapter-03/README.md) | Classification | Classificacao e metricas com MNIST. | ⏳ Planejado |
+| [04](chapter-04/README.md) | Training Linear Models | Regressao linear, gradiente descendente, regressao logistica e softmax. | ⏳ Planejado |
+| [05](chapter-05/README.md) | Support Vector Machines | SVM para classificacao, regressao e kernels. | ⏳ Planejado |
+| [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao. | ⏳ Planejado |
+| [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Ensembles, bagging, boosting e florestas aleatorias. | ⏳ Planejado |
+| [08](chapter-08/README.md) | Dimensionality Reduction | PCA, reducao de dimensionalidade e visualizacao. | ⏳ Planejado |
+| [09](chapter-09/README.md) | Unsupervised Learning | Clustering, mistura gaussiana e deteccao de anomalias. | ⏳ Planejado |
+| [10](chapter-10/README.md) | Neural Nets with Keras | Redes neurais com Keras. | ⏳ Planejado |
+| [11](chapter-11/README.md) | Training Deep Neural Networks | Treinamento de redes profundas. | ⏳ Planejado |
+| [12](chapter-12/README.md) | Custom Models and Training with TensorFlow | Modelos e loops customizados com TensorFlow. | ⏳ Planejado |
+| [13](chapter-13/README.md) | Loading and Preprocessing Data | Carregamento e preprocessamento de dados. | ⏳ Planejado |
+| [14](chapter-14/README.md) | Deep Computer Vision with CNNs | Visao computacional profunda com CNNs. | ⏳ Planejado |
+| [15](chapter-15/README.md) | Processing Sequences using RNNs and CNNs | Sequencias, RNNs e CNNs temporais. | ⏳ Planejado |
+| [16](chapter-16/README.md) | NLP with RNNs and Attention | NLP, RNNs, atencao e transformers. | ⏳ Planejado |
+| [17](chapter-17/README.md) | Autoencoders, GANs, and Diffusion Models | Autoencoders, GANs e modelos de difusao. | ⏳ Planejado |
+| [18](chapter-18/README.md) | Reinforcement Learning | Aprendizado por reforco. | ⏳ Planejado |
+| [19](chapter-19/README.md) | Training and Deploying at Scale | Treinamento e implantacao em escala. | ⏳ Planejado |
 
-## Começando
+## Comecando
 
-### Pré-requisitos
+### Pre-requisitos
 
 - Python 3.12+
-- uv (gerenciador de ambientes e pacotes)
+- `uv` para gerenciar ambiente e pacotes
 - Jupyter Lab
 
-### Configuração do Ambiente
+### Configuracao do Ambiente
 
-1. Clone este repositório:
-   ```bash
-   cd modelos-handson
-   ```
+Entre no diretorio do projeto:
 
-2. Crie um ambiente virtual isolado:
-   ```bash
-   uv venv --python 3.12 .venv
-   source .venv/bin/activate.fish  # Para Fish shell
-   # ou
-   source .venv/bin/activate      # Para Bash/Zsh
-   ```
+```bash
+cd modelos-handson
+```
 
-3. Instale as dependências:
-   ```bash
-   uv pip install -r requirements.txt
-   ```
+Crie o ambiente virtual:
 
-4. Inicie o Jupyter Lab:
-   ```bash
-   jupyter lab
-   ```
+```bash
+uv venv --python 3.12 .venv
+```
 
-## Estrutura de Cada Capítulo
+Ative o ambiente:
 
-Cada pasta de capítulo contém:
-- **Notebooks** (exp-XX-*.ipynb): Experimentos e exercícios práticos
-- **README.md**: Guia de estudo específico do capítulo
+```bash
+source .venv/bin/activate
+```
 
-Consulte o README de cada capítulo para instruções detalhadas.
+Se estiver usando Fish:
+
+```fish
+source .venv/bin/activate.fish
+```
+
+Instale as dependencias:
+
+```bash
+uv pip install -r requirements.txt
+```
+
+Abra o Jupyter Lab:
+
+```bash
+jupyter lab
+```
+
+## Organizacao de Cada Capitulo
+
+Cada pasta de capitulo pode conter:
+
+- `README.md`: roteiro e status do capitulo.
+- `*.ipynb`: notebooks principais e exercicios praticos.
+- `Respostas.md`: respostas, revisoes e comparacoes dos exercicios.
+- `datasets/`: dados usados pelo capitulo, quando necessario.
+- `images/`: figuras geradas ou usadas nos notebooks.
+
+## Progresso Atual
+
+- Capitulo 1 concluido com notebook principal, figuras e respostas teoricas.
+- Capitulo 2 concluido com projeto fim a fim, seis notebooks de exercicios e comparacao numerica dos resultados.
+- Capitulos 3 a 19 permanecem planejados para revisao e consolidacao progressiva.
 
 ## Agente de Aprendizado
 
-Este repositório conta com um **agente de orientação personalizado** (`.agent.md`) que:
-- Orienta por perguntas em vez de fornecer respostas prontas
-- Explica conceitos e trade-offs
-- Suporta tanto notebooks quanto scripts Python
+Este repositorio conta com um agente de orientacao personalizado (`.agent.md`) para apoiar o estudo. A proposta e orientar por perguntas, explicar conceitos e trade-offs, e manter o foco em aprendizado ativo nos notebooks e scripts.
 
-## Licença
+## Licenca
 
-Este repositório segue a licença do livro original e serve propósitos educacionais.
+Este repositorio segue a licenca do material original e serve a propositos educacionais.
+
+**Ultima atualizacao geral**: 7 de maio de 2026
