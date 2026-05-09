@@ -23,7 +23,6 @@ __pycache__/
 data/raw/
 data/interim/
 data/processed/
-*.csv
 *.parquet
 *.pkl
 *.pickle
