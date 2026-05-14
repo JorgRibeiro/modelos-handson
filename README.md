@@ -18,6 +18,17 @@ modelos-handson/
 │   ├── Respostas.md
 │   └── README.md
 ├── chapter-03/
+│   ├── 03_classification_pt.ipynb
+│   ├── exercicios/
+│   │   ├── 03_exercicio1.ipynb
+│   │   ├── 03_exercicio2.ipynb
+│   │   ├── 03_exercicio3.ipynb
+│   │   ├── 03_exercicio4.ipynb
+│   │   ├── titanic/
+│   │   └── emails/
+│   ├── images/
+│   ├── Respostas.md
+│   └── README.md
 ├── ...
 ├── chapter-19/
 ├── requirements.txt
@@ -30,7 +41,7 @@ modelos-handson/
 |---|----------|--------------------|--------|
 | [01](chapter-01/README.md) | The Machine Learning Landscape | Fundamentos de ML, tipos de aprendizado, generalizacao, sobreajuste, subajuste, regressao linear e regularizacao. | ✅ Concluido |
 | [02](chapter-02/README.md) | End-to-End Machine Learning Project | Projeto completo com California Housing Prices, EDA, pipelines, validacao cruzada, busca de hiperparametros, avaliacao final e persistencia. | ✅ Concluido |
-| [03](chapter-03/README.md) | Classification | Classificacao e metricas com MNIST. | ⏳ Planejado |
+| [03](chapter-03/README.md) | Classification | Classificacao com MNIST, metricas, validacao cruzada, GridSearchCV, Titanic e detector de Spam/Ham com pipeline de texto. | ✅ Implementado |
 | [04](chapter-04/README.md) | Training Linear Models | Regressao linear, gradiente descendente, regressao logistica e softmax. | ⏳ Planejado |
 | [05](chapter-05/README.md) | Support Vector Machines | SVM para classificacao, regressao e kernels. | ⏳ Planejado |
 | [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao. | ⏳ Planejado |
@@ -108,7 +119,8 @@ Cada pasta de capitulo pode conter:
 
 - Capitulo 1 concluido com notebook principal, figuras e respostas teoricas.
 - Capitulo 2 concluido com projeto fim a fim, seis notebooks de exercicios e comparacao numerica dos resultados.
-- Capitulos 3 a 19 permanecem planejados para revisao e consolidacao progressiva.
+- Capitulo 3 implementado com notebook principal de classificacao, quatro exercicios praticos, datasets Titanic e SpamAssassin, validacao cruzada, GridSearchCV e avaliacao final de modelos.
+- Capitulos 4 a 19 permanecem planejados para revisao e consolidacao progressiva.
 
 ## Agente de Aprendizado
 
@@ -118,4 +130,4 @@ Este repositorio conta com um agente de orientacao personalizado (`.agent.md`) p
 
 Este repositorio segue a licenca do material original e serve a propositos educacionais.
 
-**Ultima atualizacao geral**: 7 de maio de 2026
+**Ultima atualizacao geral**: 14 de maio de 2026
