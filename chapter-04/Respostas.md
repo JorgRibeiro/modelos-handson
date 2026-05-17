@@ -186,13 +186,15 @@ Vejamos:
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Eu usaria dois classificadores de regressão logística, um para classificar as fotos como externas ou internas e outro para classificá-las como diurnas ou noturnas.
+
+Nesse caso, as classes não são mutuamente exclusivas: uma foto pode ser externa e diurna, externa e noturna, interna e diurna ou interna e noturna. A regressão Softmax é mais adequada quando cada instância deve pertencer a apenas uma classe entre várias possíveis.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Se você quer classificar fotos como externas/internas e diurnas/noturnas, como essas classes não são exclusivas, isto é, todas as quatro combinações são possíveis, você deve treinar dois classificadores de regressão logística.
 </details>
 
 ---
