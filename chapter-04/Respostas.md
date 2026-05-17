@@ -23,13 +23,15 @@ Se você tem um conjunto de treinamento com milhões de características, pode u
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Os algoritmos de Gradiente Descendente tendem a ter dificuldades quando o conjunto de treinamento não está escalonado, pois ele irá demorar muito para convergir. Ou seja, ele irá encontrar o mínimo local, mas demorará muito.
+
+A melhor alternativa para contornar esse problema é garantir que os dados tenham uma escala semelhante.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Se as características do conjunto de treinamento tiverem escalas muito diferentes, a função de custo terá o formato de uma tigela alongada, então os algoritmos de descida do gradiente levarão muito tempo para convergir. Para resolver isso, você deve escalonar os dados antes de treinar o modelo. Observe que a Equação Normal ou a abordagem por SVD funcionam sem problemas mesmo sem escalonamento. Além disso, modelos regularizados podem convergir para uma solução subótima se as características não forem escalonadas: como a regularização penaliza pesos grandes, características com valores menores tendem a ser ignoradas em comparação com características com valores maiores.
 </details>
 
 ---
