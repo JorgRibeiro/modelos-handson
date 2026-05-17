@@ -90,13 +90,15 @@ Se o erro de validação aumenta consistentemente após cada época, uma possibi
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Não, pois ele ainda está explorando a região do mínimo. Por usar mini-lotes aleatórios, ele tende a ter maior aleatoriedade na busca, causando instabilidade no erro de validação.
+
+O melhor é esperar um tempo sem melhora e manter salvo o melhor modelo encontrado.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Devido à sua natureza aleatória, nem a descida do gradiente estocástica nem a descida do gradiente em mini-lotes têm garantia de progresso em cada iteração de treinamento. Portanto, se você parar o treinamento imediatamente quando o erro de validação aumentar, poderá parar cedo demais, antes que o ótimo seja alcançado. Uma opção melhor é salvar o modelo em intervalos regulares; então, quando ele não melhorar por bastante tempo, o que significa que provavelmente não baterá mais o melhor resultado, você pode voltar ao melhor modelo salvo.
 </details>
 
 ---
