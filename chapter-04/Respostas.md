@@ -123,13 +123,17 @@ A descida do gradiente estocástica tem a iteração de treinamento mais rápida
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Provavelmente o modelo está sofrendo de overfitting. Entre as formas de resolver estão:
+
+- reduzir o grau da regressão polinomial;
+- aplicar regularização, como Ridge ou Lasso;
+- aumentar o tamanho do conjunto de treinamento.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Se o erro de validação é muito maior que o erro de treinamento, isso provavelmente acontece porque o modelo está sofrendo overfitting no conjunto de treinamento. Uma forma de tentar corrigir isso é reduzir o grau polinomial: um modelo com menos graus de liberdade tem menor chance de sofrer overfitting. Outra coisa que você pode tentar é regularizar o modelo, por exemplo, adicionando uma penalidade ℓ₂ (Ridge) ou uma penalidade ℓ₁ (Lasso) à função de custo. Isso também reduz os graus de liberdade do modelo. Por fim, você pode tentar aumentar o tamanho do conjunto de treinamento.
 </details>
 
 ---
