@@ -142,14 +142,15 @@ Se o erro de validação é muito maior que o erro de treinamento, isso provavel
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
+O modelo tem um viés alto. Você deve reduzir o hiperparâmetro alpha da regularização.
+ 
 
-*(Resposta em construção.)*
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Se tanto o erro de treinamento quanto o erro de validação são quase iguais e bastante altos, o modelo provavelmente está sofrendo underfitting no conjunto de treinamento, o que significa que ele tem um viés alto. Você deve tentar reduzir o hiperparâmetro de regularização _α_.
 </details>
 
 ---
@@ -168,7 +169,10 @@ As perguntas revisam os conceitos centrais do capítulo: Equação Normal, desci
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Let's see:
+  * A model with some regularization typically performs better than a model without any regularization, so you should generally prefer Ridge Regression over plain Linear Regression.
+  * Lasso Regression uses an ℓ₁ penalty, which tends to push the weights down to exactly zero. This leads to sparse models, where all weights are zero except for the most important weights. This is a way to perform feature selection automatically, which is good if you suspect that only a few features actually matter. When you are not sure, you should prefer Ridge Regression.
+  * Elastic Net is generally preferred over Lasso since Lasso may behave erratically in some cases (when several features are strongly correlated or when there are more features than training instances). However, it does add an extra hyperparameter to tune. If you want Lasso without the erratic behavior, you can just use Elastic Net with an `l1_ratio` close to 1.
 </details>
 
 ---
