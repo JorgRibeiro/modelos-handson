@@ -143,7 +143,6 @@ Se o erro de validação é muito maior que o erro de treinamento, isso provavel
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 O modelo tem um viés alto. Você deve reduzir o hiperparâmetro alpha da regularização.
- 
 
 </details>
 
@@ -163,16 +162,21 @@ Se tanto o erro de treinamento quanto o erro de validação são quase iguais e 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+a. Usaria a regressão Ridge em vez da regressão linear simples quando eu quisesse reduzir overfitting. A Ridge adiciona regularização, penalizando pesos muito grandes e ajudando o modelo a generalizar melhor.
+
+b. Usaria a regressão Lasso em vez da Ridge quando eu suspeitasse que poucas características são realmente importantes. A Lasso usa regularização L1, que pode zerar alguns pesos e, assim, fazer seleção automática de atributos.
+
+c. Usaria a regressão Elastic Net em vez da Lasso quando eu quisesse combinar os efeitos da Ridge e da Lasso. Ela é útil quando há características muito correlacionadas ou quando existem muitas características em relação ao número de exemplos, pois tende a ser mais estável que a Lasso pura.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-Let's see:
-  * A model with some regularization typically performs better than a model without any regularization, so you should generally prefer Ridge Regression over plain Linear Regression.
-  * Lasso Regression uses an ℓ₁ penalty, which tends to push the weights down to exactly zero. This leads to sparse models, where all weights are zero except for the most important weights. This is a way to perform feature selection automatically, which is good if you suspect that only a few features actually matter. When you are not sure, you should prefer Ridge Regression.
-  * Elastic Net is generally preferred over Lasso since Lasso may behave erratically in some cases (when several features are strongly correlated or when there are more features than training instances). However, it does add an extra hyperparameter to tune. If you want Lasso without the erratic behavior, you can just use Elastic Net with an `l1_ratio` close to 1.
+Vejamos:
+
+- Um modelo com alguma regularização geralmente tem desempenho melhor do que um modelo sem nenhuma regularização, então normalmente é melhor preferir a regressão Ridge à regressão linear simples.
+- A regressão Lasso usa uma penalidade ℓ₁, que tende a empurrar os pesos exatamente para zero. Isso gera modelos esparsos, nos quais todos os pesos são zero, exceto os pesos mais importantes. Essa é uma forma de fazer seleção automática de atributos, o que é bom se você suspeita que apenas poucas características realmente importam. Quando não tiver certeza, prefira a regressão Ridge.
+- A Elastic Net geralmente é preferível à Lasso, pois a Lasso pode se comportar de forma instável em alguns casos, por exemplo, quando várias características são fortemente correlacionadas ou quando há mais características do que instâncias de treinamento. No entanto, ela adiciona um hiperparâmetro extra para ajustar. Se você quiser usar Lasso sem esse comportamento instável, pode usar Elastic Net com `l1_ratio` próximo de 1.
 </details>
 
 ---
