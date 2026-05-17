@@ -73,13 +73,14 @@ Se o problema de otimização for convexo, como na regressão linear ou na regre
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+A taxa de aprendizado está desalinhada com o modelo, provavelmente estando muito alta. A melhor forma de consertar isso é encontrar uma boa taxa de aprendizado, usando grid search.
+
+Mas, se o erro de treinamento não estiver aumentando, então o modelo provavelmente está sofrendo overfitting. Nesse caso, o ideal é parar o treinamento.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
-
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Se o erro de validação aumenta consistentemente após cada época, uma possibilidade é que a taxa de aprendizado esteja alta demais e o algoritmo esteja divergindo. Se o erro de treinamento também estiver aumentando, então esse é claramente o problema, e você deve reduzir a taxa de aprendizado. No entanto, se o erro de treinamento não estiver aumentando, então o modelo está sofrendo overfitting no conjunto de treinamento, e você deve parar o treinamento.
 </details>
 
 ---
