@@ -57,13 +57,13 @@ O gradiente descendente não pode ficar preso em um mínimo local ao treinar um 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Todos os algoritmos chegam perto do mínimo, mas não necessariamente ao mesmo modelo. O GD em minibatch pode se deslocar para um pouco mais perto do mínimo que o estocástico, mas ambos podem ficar oscilando ao redor do mínimo se a taxa de aprendizado não for reduzida gradualmente. O GD em batch segue um caminho mais direto para o mínimo, enquanto os outros fazem um caminho mais aleatório.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+Se o problema de otimização for convexo, como na regressão linear ou na regressão logística, e assumindo que a taxa de aprendizado não seja alta demais, todos os algoritmos de descida do gradiente se aproximarão do ótimo global e acabarão produzindo modelos bastante parecidos. No entanto, a menos que você reduza gradualmente a taxa de aprendizado, a descida do gradiente estocástica e a descida do gradiente em mini-lotes nunca convergirão de verdade; em vez disso, continuarão saltando para frente e para trás ao redor do ótimo global. Isso significa que, mesmo que você os execute por muito tempo, esses algoritmos de descida do gradiente produzirão modelos ligeiramente diferentes.
 </details>
 
 ---
