@@ -41,13 +41,13 @@ Se as características do conjunto de treinamento tiverem escalas muito diferent
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Não, pois a função de custo é convexa. O gradiente descendente converge para o mínimo global se a taxa de aprendizado não for muito grande e se você esperar o suficiente.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+O gradiente descendente não pode ficar preso em um mínimo local ao treinar um modelo de regressão logística, porque a função de custo é convexa. _Convexa_ significa que, se você desenhar uma linha reta entre dois pontos quaisquer da curva, essa linha nunca cruza a curva.
 </details>
 
 ---
