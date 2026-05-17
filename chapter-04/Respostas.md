@@ -108,13 +108,12 @@ Devido à sua natureza aleatória, nem a descida do gradiente estocástica nem a
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+O algoritmo que concilia tempo e precisão é o GD em minibatch, pois ele utiliza características dos dois algoritmos vistos. Porém, o GD estocástico costuma chegar mais rápido perto da solução, enquanto o GD em batch vai mais devagar, mas converge de forma mais estável. O GD estocástico e o GD em minibatch podem ficar oscilando ao redor da solução; para fazê-los convergir, é necessário reduzir gradualmente a taxa de aprendizado.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
-
-As perguntas revisam os conceitos centrais do capítulo: Equação Normal, descida do gradiente, taxa de aprendizado, escalonamento de atributos, regressão polinomial, curvas de aprendizado, regularização, Ridge, Lasso, Elastic Net, regressão logística e regressão Softmax.
+A descida do gradiente estocástica tem a iteração de treinamento mais rápida, pois considera apenas uma instância de treinamento por vez. Por isso, geralmente é a primeira a chegar à vizinhança do ótimo global, ou então a descida do gradiente em mini-lotes com um tamanho de mini-lote muito pequeno. No entanto, apenas a descida do gradiente em batch realmente convergirá, dado tempo de treinamento suficiente. Como mencionado, a descida do gradiente estocástica e a descida do gradiente em mini-lotes ficarão saltando ao redor do ótimo, a menos que você reduza gradualmente a taxa de aprendizado.
 </details>
 
 ---
