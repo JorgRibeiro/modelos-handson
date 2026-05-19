@@ -54,18 +54,20 @@ As SVMs tentam ajustar a maior "rua" possível entre as classes, como vimos na p
 
 ---
 
-### 4 - Pergunta.
+### 4 - Um classificador SVM pode gerar uma pontuação de confiança ao classificar uma instância? E quanto a uma probabilidade?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Sim, um classificador SVM pode gerar uma pontuação de confiança usando o método `decision_function()`. Essa pontuação indica a distância da instância até a fronteira de decisão.
+
+Por padrão, essa pontuação não é uma probabilidade. Para obter probabilidades em um `SVC`, é preciso definir `probability=True`, o que faz o modelo usar validação cruzada internamente para calibrar essas pontuações e permitir o uso de `predict_proba()`.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+Você pode usar o método `decision_function()` para obter pontuações de confiança. Essas pontuações representam a distância entre a instância e a fronteira de decisão. No entanto, elas não podem ser convertidas diretamente em uma estimativa de probabilidade de classe. Se você definir `probability=True` ao criar um `SVC`, então, ao final do treinamento, ele usará validação cruzada com 5 folds para gerar pontuações fora da amostra para as instâncias de treinamento, e treinará um modelo de `LogisticRegression` para mapear essas pontuações para probabilidades estimadas. Os métodos `predict_proba()` e `predict_log_proba()` ficarão disponíveis.
 </details>
 
 ---
