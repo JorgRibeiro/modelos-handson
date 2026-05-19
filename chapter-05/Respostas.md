@@ -92,18 +92,20 @@ As três classes podem ser usadas para classificação linear de margem larga. A
 
 ---
 
-### 6 - Pergunta.
+### 6 - Digamos que você treinou um classificador SVM com kernel RBF, mas aparentemente ele subajusta o conjunto de treinamento. Você deve aumentar ou diminuir o _γ_ (`gamma`)? E o que fazer com o `C`?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+No caso de subajuste, a atitude correta seria aumentar o valor de _γ_ (`gamma`) ou aumentar o valor de `C`, ou ambos.
+
+Aumentar `gamma` deixa a curva em sino do kernel RBF mais estreita, fazendo com que cada instância tenha uma influência mais local. Isso permite uma fronteira de decisão mais irregular. Aumentar `C` reduz a regularização, permitindo que o modelo se ajuste melhor ao conjunto de treinamento.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+Se um classificador SVM treinado com kernel RBF subajusta o conjunto de treinamento, pode haver regularização demais. Para diminuí-la, você precisa aumentar `gamma` ou `C`, ou ambos.
 </details>
 
 ---
