@@ -20,18 +20,20 @@ A ideia fundamental por trás das máquinas de vetores de suporte é ajustar a "
 
 ---
 
-### 2 - Pergunta.
+### 2 - O que é um vetor de suporte?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+São instâncias localizadas na margem, ou seja, na "rua" criada pela SVM, incluindo suas bordas. Elas determinam a fronteira de decisão do modelo.
+
+As instâncias que não são vetores de suporte não influenciam diretamente a fronteira de decisão, desde que permaneçam fora da margem.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+Depois de treinar uma SVM, um _vetor de suporte_ é qualquer instância localizada na "rua" mencionada na resposta anterior, incluindo suas bordas. A fronteira de decisão é inteiramente determinada pelos vetores de suporte. Qualquer instância que não seja um vetor de suporte, isto é, que esteja fora da rua, não tem influência alguma: você poderia removê-la, adicionar mais instâncias ou movê-la, e desde que ela permaneça fora da rua, não afetará a fronteira de decisão. Calcular previsões com uma SVM com kernel envolve apenas os vetores de suporte, não todo o conjunto de treinamento.
 </details>
 
 ---
