@@ -146,7 +146,7 @@ O truque do kernel é uma técnica matemática que torna possível treinar um mo
 
 ---
 
-### 9 - Treine um `LinearSVC` no conjunto de dados Iris.
+### 9 - Treine um `LinearSVC` em um conjunto de dados linearmente separável. Depois, treine um `SVC` e um `SGDClassifier` no mesmo conjunto de dados. Veja se consegue fazer com que eles produzam aproximadamente o mesmo modelo.
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -162,7 +162,7 @@ O exercício propõe treinar um classificador SVM linear para distinguir classes
 
 ---
 
-### 10 - Treine uma SVM no MNIST.
+### 10 - Treine um classificador SVM no conjunto de dados Wine, que pode ser carregado com `sklearn.datasets.load_wine()`. Esse conjunto contém a análise química de 178 amostras de vinho produzidas por 3 cultivadores diferentes. O objetivo é treinar um modelo de classificação capaz de prever o cultivador com base na análise química do vinho. Como classificadores SVM são classificadores binários, será necessário usar one-versus-all para classificar as 3 classes. Qual acurácia você consegue alcançar?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -178,8 +178,7 @@ A proposta é treinar SVMs no MNIST, ajustar hiperparâmetros e comparar desempe
 
 ---
 
-### 11 - Treine uma SVM de regressão no California Housing.
-
+### 11 - Treine e ajuste um regressor SVM no conjunto de dados California Housing. Você pode usar o conjunto original, em vez da versão modificada usada no Capítulo 2. O conjunto original pode ser obtido com `sklearn.datasets.fetch_california_housing()`. Os alvos representam centenas de milhares de dólares. Como há mais de 20.000 instâncias, SVMs podem ser lentas; portanto, para o ajuste de hiperparâmetros, use bem menos instâncias, por exemplo 2.000, para testar mais combinações. Qual é o RMSE do seu melhor modelo?
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
