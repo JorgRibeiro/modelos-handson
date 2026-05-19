@@ -38,18 +38,18 @@ Depois de treinar uma SVM, um _vetor de suporte_ é qualquer instância localiza
 
 ---
 
-### 3 - Pergunta.
+### 3 - Por qual motivo é importante escalonar as entradas ao utilizar SVMs?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+As SVMs são bem sensíveis ao escalonamento, então é essencial para um bom modelo que os dados sejam escalonados. Isso evita que características com escalas maiores dominem características com escalas menores, deixando a fronteira de decisão mais equilibrada e factível.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+As SVMs tentam ajustar a maior "rua" possível entre as classes, como vimos na primeira resposta. Portanto, se o conjunto de treinamento não estiver escalonado, a SVM tenderá a negligenciar atributos com valores menores.
 </details>
 
 ---
