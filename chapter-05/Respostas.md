@@ -2,7 +2,119 @@
 
 <!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
 
-### 1 a 8 - Perguntas conceituais sobre SVMs.
+### 1 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 2 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 3 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 4 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 5 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 6 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 7 - Pergunta.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+</details>
+
+---
+
+### 8 - Perguntas.
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
