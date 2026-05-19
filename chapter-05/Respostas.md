@@ -128,18 +128,20 @@ Um modelo de SVM de regressão tenta colocar o maior número possível de instâ
 
 ---
 
-### 8 - Perguntas.
+### 8 - Para que usar o truque do kernel?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+O truque do kernel serve para treinar modelos SVM não lineares sem precisar criar explicitamente todos os novos atributos.
+
+Na prática, ele permite que o modelo se comporte como se os dados tivessem sido transformados para um espaço de dimensão maior, onde talvez seja possível separá-los com uma fronteira linear. A vantagem é obter esse efeito de forma eficiente, calculando apenas similaridades por meio do kernel.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+O truque do kernel é uma técnica matemática que torna possível treinar um modelo SVM não linear. O modelo resultante é equivalente a mapear as entradas para outro espaço usando uma transformação não linear e, em seguida, treinar uma SVM linear nas entradas resultantes em alta dimensão. O truque do kernel fornece o mesmo resultado sem precisar transformar explicitamente as entradas.
 </details>
 
 ---
