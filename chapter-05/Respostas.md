@@ -72,18 +72,22 @@ Você pode usar o método `decision_function()` para obter pontuações de confi
 
 ---
 
-### 5 - Pergunta.
+### 5 - Como escolher entre `LinearSVC`, `SVC` e `SGDClassifier`?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Usaria `LinearSVC` quando o problema for de classificação linear e eu quiser uma implementação otimizada para SVM linear.
+
+Usaria `SVC` quando precisasse de kernels, por exemplo, em problemas não lineares. Ele é mais flexível, mas não escala tão bem para datasets com muitas instâncias.
+
+Usaria `SGDClassifier` quando o conjunto de dados fosse muito grande, quando eu precisasse de treinamento incremental ou quando quisesse mais flexibilidade no processo de otimização.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+As três classes podem ser usadas para classificação linear de margem larga. A classe `SVC` também suporta o truque do kernel, o que a torna capaz de lidar com tarefas não lineares. No entanto, isso tem um custo: a classe `SVC` não escala bem para datasets com muitas instâncias. Por outro lado, ela escala bem para um grande número de atributos. A classe `LinearSVC` implementa um algoritmo otimizado para SVMs lineares, enquanto `SGDClassifier` usa descida do gradiente estocástica. Dependendo do dataset, `LinearSVC` pode ser um pouco mais rápida que `SGDClassifier`, mas nem sempre; além disso, `SGDClassifier` é mais flexível e suporta aprendizado incremental.
 </details>
 
 ---
