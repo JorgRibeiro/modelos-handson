@@ -110,18 +110,20 @@ Se um classificador SVM treinado com kernel RBF subajusta o conjunto de treiname
 
 ---
 
-### 7 - Pergunta.
+### 7 - O que significa um modelo ser insensível a _ε_?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Significa que, em uma SVM de regressão, erros menores que _ε_ não afetam o modelo. Ou seja, instâncias que ficam dentro da margem, ou dentro da "rua", não alteram a função aprendida.
+
+A largura da rua é controlada por _ε_.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+Um modelo de SVM de regressão tenta colocar o maior número possível de instâncias dentro de uma pequena margem ao redor de suas previsões. Se você adicionar instâncias dentro dessa margem, o modelo não será afetado: por isso dizemos que ele é _ε-insensitive_, ou insensível a _ε_.
 </details>
 
 ---
