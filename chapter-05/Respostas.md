@@ -2,18 +2,20 @@
 
 <!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
 
-### 1 - Pergunta.
+### 1 - Qual é a ideia fundamental das máquinas de vetores de suporte (SVM)?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Ser um modelo robusto e versátil, englobando várias técnicas de aprendizado de máquina. Seu conceito principal gira em torno da fronteira de decisão: encontrar o espaço adequado para essa fronteira é sua principal tarefa.
+
+Mais especificamente, a SVM busca separar as classes com a maior margem possível entre a fronteira de decisão e as instâncias de treinamento mais próximas.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam margem, vetores de suporte, margem suave, kernels, regularização, escalonamento de atributos e uso de SVMs para classificação e regressão.
+A ideia fundamental por trás das máquinas de vetores de suporte é ajustar a "rua" mais larga possível entre as classes. Em outras palavras, o objetivo é ter a maior margem possível entre a fronteira de decisão que separa as duas classes e as instâncias de treinamento. Ao realizar classificação com margem suave, a SVM busca um compromisso entre separar perfeitamente as duas classes e manter a rua mais larga possível, isto é, algumas instâncias podem acabar ficando dentro da rua. Outra ideia importante é usar kernels ao treinar em conjuntos de dados não lineares. As SVMs também podem ser ajustadas para realizar regressão linear e não linear, além de detecção de novidades.
 </details>
 
 ---
