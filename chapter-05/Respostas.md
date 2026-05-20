@@ -151,7 +151,23 @@ O truque do kernel é uma técnica matemática que torna possível treinar um mo
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+No notebook `05_exercicio_9.ipynb`, usei o conjunto Iris com apenas duas classes (`setosa` e `versicolor`) e dois atributos: comprimento e largura da pétala. Essa escolha deixa o problema linearmente separável.
+
+Os dados foram escalonados com `StandardScaler`, e treinei três modelos lineares comparáveis:
+
+- `LinearSVC(C=5, loss="hinge")`
+- `SVC(kernel="linear", C=5)`
+- `SGDClassifier(loss="hinge")`, usando `alpha = 1 / (C * m)` para aproximar o efeito de `C`
+
+Os três modelos alcançaram acurácia de `1.0`. As fronteiras de decisão também ficaram muito próximas:
+
+| Modelo | Acurácia | Coeficientes aproximados | Intercepto aproximado |
+|---|---:|---:|---:|
+| `LinearSVC` | 1,00 | `[0,7305, 1,9545]` | `-3,3415` |
+| `SVC(kernel="linear")` | 1,00 | `[0,7768, 1,8250]` | `-3,3379` |
+| `SGDClassifier` | 1,00 | `[0,7710, 1,8432]` | `-3,3397` |
+
+A conclusão é que os três estimadores conseguem produzir modelos aproximadamente equivalentes quando usamos dados escalonados, perda `hinge` e regularização comparável. O `SGDClassifier` pode variar um pouco mais por causa da otimização via gradiente estocástico.
 </details>
 
 <details>
@@ -167,7 +183,25 @@ O exercício propõe treinar um classificador SVM linear para distinguir classes
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+No notebook `05_exercicio_10.ipynb`, carreguei o conjunto Wine com `load_wine(as_frame=True)`. O dataset possui `178` instâncias, `13` atributos e `3` classes, representando três cultivadores diferentes.
+
+Como SVMs são sensíveis à escala, cada modelo foi colocado em um `Pipeline` com `StandardScaler`. Treinei os seguintes classificadores:
+
+- `LinearSVC(C=5, loss="hinge")`
+- `SVC(kernel="linear", C=5)`
+- `SGDClassifier(loss="hinge")`
+
+Todos os três modelos alcançaram acurácia de `1.0` no conjunto completo usado no notebook:
+
+| Modelo | Acurácia |
+|---|---:|
+| `LinearSVC` | 1,00 |
+| `SVC(kernel="linear")` | 1,00 |
+| `SGDClassifier` | 1,00 |
+
+Para visualizar as fronteiras de decisão, projetei os 13 atributos para 2 dimensões usando PCA. Depois, treinei os mesmos tipos de modelos nesse espaço 2D e desenhei as regiões/fronteiras de decisão. Essa visualização é apenas interpretativa; a avaliação principal foi feita com os 13 atributos originais.
+
+A conclusão é que, nesse dataset, classificadores SVM lineares com escalonamento já separam muito bem as três classes.
 </details>
 
 <details>
@@ -182,7 +216,36 @@ A proposta é treinar SVMs no MNIST, ajustar hiperparâmetros e comparar desempe
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+No notebook `05_exercicio_11.ipynb`, usei o conjunto California Housing com `fetch_california_housing(as_frame=True)`. O dataset possui `20.640` instâncias e `8` atributos. O alvo representa valores de casas em centenas de milhares de dólares.
+
+Separei os dados em treino e teste com `train_test_split(test_size=0.2, random_state=42)`. Como `SVR` pode ser lento nesse volume de dados, fiz a busca de hiperparâmetros em um subconjunto de `2.000` instâncias do treino.
+
+O modelo usado foi:
+
+```python
+make_pipeline(
+    StandardScaler(),
+    SVR(kernel="rbf")
+)
+```
+
+Ajustei os hiperparâmetros com `RandomizedSearchCV`, testando `C`, `gamma` e `epsilon` em escala logarítmica. A melhor configuração encontrada foi aproximadamente:
+
+| Hiperparâmetro | Valor |
+|---|---:|
+| `C` | `8,2005` |
+| `gamma` | `0,1129` |
+| `epsilon` | `0,0157` |
+
+O melhor RMSE na validação cruzada foi `0,5945`. Depois disso, retreinei o melhor modelo no conjunto de treino completo e avaliei no conjunto de teste.
+
+O resultado final foi:
+
+```text
+RMSE no conjunto de teste: 0,5742
+```
+
+Como o alvo está em centenas de milhares de dólares, isso equivale a um erro típico de aproximadamente `US$ 57.423`.
 </details>
 
 <details>
