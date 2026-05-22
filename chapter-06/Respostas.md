@@ -18,18 +18,24 @@ A profundidade de uma árvore binária bem balanceada contendo _m_ folhas é igu
 
 ---
 
-### 2 - Perguntas conceituais sobre árvores de decisão.
+### 2 - A impureza de Gini de um nó costuma ser menor ou maior que a de seus pais? Geralmente é menor/maior ou sempre é maior/menor?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Geralmente, a impureza de Gini de um nó filho é menor que a do nó pai, porque o algoritmo CART escolhe divisões que minimizam a soma ponderada das impurezas dos nós filhos.
+
+Mas isso não é sempre verdade para cada filho individualmente. Um dos nós filhos pode ter impureza maior que a do pai, desde que o outro filho tenha uma impureza baixa o suficiente para compensar. O que precisa diminuir é a impureza ponderada total após a divisão.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+A impureza de Gini de um nó geralmente é menor que a de seu pai. Isso acontece por causa da função de custo do algoritmo CART, que divide cada nó de uma forma que minimiza a soma ponderada das impurezas de Gini dos seus filhos.
+
+No entanto, é possível que um nó tenha impureza de Gini maior que a de seu pai, desde que esse aumento seja mais do que compensado por uma diminuição na impureza do outro filho. Por exemplo, considere um nó contendo quatro instâncias da classe A e uma da classe B. Sua impureza de Gini é 1 - (1/5)^2 - (4/5)^2 = 0,32.
+
+Agora suponha que o conjunto de dados seja unidimensional e que as instâncias estejam alinhadas nesta ordem: A, B, A, A, A. O algoritmo dividirá esse nó após a segunda instância, produzindo um nó filho com as instâncias A e B, e outro nó filho com as instâncias A, A e A. A impureza de Gini do primeiro filho é 1 - (1/2)^2 - (1/2)^2 = 0,5, maior que a impureza de seu pai. Isso é compensado pelo fato de que o outro nó é puro, então a impureza de Gini ponderada total é 2/5 x 0,5 + 3/5 x 0 = 0,2, que é menor que a impureza de Gini do pai.
 </details>
 
 ---
