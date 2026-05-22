@@ -40,18 +40,18 @@ Agora suponha que o conjunto de dados seja unidimensional e que as instâncias e
 
 ---
 
-### 3 - Perguntas conceituais sobre árvores de decisão.
+### 3 - Caso uma árvore de decisão esteja sobreajustando o conjunto de treinamento, é uma boa ideia tentar diminuir o max_depth?.
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Sim. Se uma árvore de decisão está sobreajustando o conjunto de treinamento, diminuir `max_depth` pode ajudar, pois limita a profundidade da árvore, reduz a complexidade do modelo e funciona como regularização. Com uma árvore menos profunda, as fronteiras de decisão tendem a ficar menos específicas ao conjunto de treino, o que pode melhorar a generalização.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+Se uma Árvore de Decisão estiver sobreajustando o conjunto de treinamento, pode ser uma boa ideia diminuir `max_depth`, pois isso restringirá o modelo, regularizando-o.
 </details>
 
 ---
