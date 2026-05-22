@@ -2,18 +2,18 @@
 
 <!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
 
-### 1 - Perguntas conceituais sobre árvores de decisão.
+### 1 - Qual é a profundidade aproximada de uma árvore de decisão treinada(sem restrições) em um conjunto de treinamento com 1 milhão de instâncias?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Para uma árvore de decisão treinada **sem restrições**, a profundidade aproximada é `log2(m)`, em que `m` é o número de instâncias de treino. Para `m = 1.000.000`, temos `log2(1.000.000) ≈ 20`. Na prática, pode ser um pouco maior, porque a árvore geralmente não fica perfeitamente balanceada.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+A profundidade de uma árvore binária bem balanceada contendo _m_ folhas é igual a log₂(_m_), arredondado para cima. log₂ é o logaritmo binário; log₂(_m_) = log(_m_) / log(2). Uma Árvore de Decisão binária, isto é, uma árvore que toma apenas decisões binárias, como ocorre com todas as árvores no Scikit-Learn, terminará mais ou menos bem balanceada ao final do treinamento, com uma folha por instância de treinamento se for treinada sem restrições. Portanto, se o conjunto de treinamento contém um milhão de instâncias, a Árvore de Decisão terá profundidade log₂(10<sup>6</sup>) ≈ 20, na verdade um pouco maior, já que a árvore geralmente não será perfeitamente balanceada.
 </details>
 
 ---
