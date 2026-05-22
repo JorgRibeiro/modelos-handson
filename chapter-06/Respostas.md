@@ -2,7 +2,7 @@
 
 <!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
 
-### 1 a 6 - Perguntas conceituais sobre árvores de decisão.
+### 1 - Perguntas conceituais sobre árvores de decisão.
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -17,6 +17,87 @@ As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, 
 </details>
 
 ---
+
+### 2 - Perguntas conceituais sobre árvores de decisão.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+</details>
+
+---
+
+### 3 - Perguntas conceituais sobre árvores de decisão.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+</details>
+
+---
+
+### 4 - Perguntas conceituais sobre árvores de decisão.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+</details>
+
+---
+
+### 5 - Perguntas conceituais sobre árvores de decisão.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+</details>
+
+---
+
+### 6 - Perguntas conceituais sobre árvores de decisão.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+</details>
+
+---
+
 
 ### 7 - Treine e ajuste uma árvore no conjunto de dados moons.
 
