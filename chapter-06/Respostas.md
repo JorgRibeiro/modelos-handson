@@ -56,18 +56,18 @@ Se uma Árvore de Decisão estiver sobreajustando o conjunto de treinamento, pod
 
 ---
 
-### 4 - Perguntas conceituais sobre árvores de decisão.
+### 4 - se uma árvore de decisão sbuajusta o conjunto de treinamento, é uma boa ideia escalonar as características de entrada?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Não. Escalonar ou centralizar as características de entrada não deve resolver o subajuste de uma Árvore de Decisão, porque esse tipo de modelo não é sensível à escala dos atributos. Se a árvore está subajustando, o problema provavelmente está ligado a restrições excessivas ou baixa complexidade do modelo, como `max_depth` muito baixo, `min_samples_leaf` muito alto ou `max_leaf_nodes` muito baixo.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+Árvores de Decisão não se importam se os dados de treinamento estão escalonados ou centralizados; essa é uma das vantagens delas. Portanto, se uma Árvore de Decisão está subajustando o conjunto de treinamento, escalonar as características de entrada será apenas uma perda de tempo.
 </details>
 
 ---
