@@ -105,11 +105,17 @@ Se o número de características dobrar, então o tempo de treinamento também s
 ---
 
 
-### 7 - Treine e aperfeiçoe uma Árvore de Decisão para o conjunto de dados moons seguindo estas etapas:
-###     a. Use make_moons(n_samples=1000, noise=0.4) para gerar um conjunto de treinamento moons.
-###     b. Utilize train_test_split() para dividir o conjunto de dados em conjunto de treinamento e conjunto de teste.
-###     c. Use grid search com validação cruzada (com a ajuda da classe GridSearchCV) a fim de encontrar bons valores de hiperparâmetros para DecisionTreeClassifier. Dica: experimente diversos valores para max_leaf_nodes.
-###     d. Treine-o em todo o conjunto de treinamento usando esses hiperparâmetros e avalie a performance do modelo no conjunto de teste. Você deve obter aproximadamente de 85% a 87% de acurácia.
+### 7 - Treine e aperfeiçoe uma Árvore de Decisão no conjunto moons
+
+**Etapas:**
+
+a. Use `make_moons(n_samples=1000, noise=0.4)` para gerar um conjunto de treinamento moons.
+
+b. Utilize `train_test_split()` para dividir os dados em conjunto de treinamento e conjunto de teste.
+
+c. Use grid search com validação cruzada, por meio da classe `GridSearchCV`, para encontrar bons valores de hiperparâmetros para `DecisionTreeClassifier`. Dica: experimente diversos valores para `max_leaf_nodes`.
+
+d. Treine o modelo em todo o conjunto de treinamento usando esses hiperparâmetros e avalie a performance no conjunto de teste. Você deve obter aproximadamente de 85% a 87% de acurácia.
 
 
 <details>
@@ -128,12 +134,24 @@ O exercício propõe gerar um conjunto com `make_moons`, dividir treino/teste, u
 
 ---
 
-### 8 - Crie uma floresta manual a partir de várias árvores.
+### 8 - Crie uma floresta manual a partir de várias Árvores de Decisão
+
+**Etapas:**
+
+a. Dando continuidade ao exercício anterior, gere 1000 subconjuntos do conjunto de treinamento, cada um contendo 100 instâncias selecionadas aleatoriamente. Dica: você pode usar a classe `ShuffleSplit` do Scikit-Learn.
+
+b. Treine uma Árvore de Decisão em cada subconjunto, usando os melhores valores de hiperparâmetros encontrados no exercício anterior. Avalie essas 1000 árvores no conjunto de teste. Como foram treinadas em conjuntos menores, elas provavelmente terão desempenho pior que o da primeira Árvore de Decisão, atingindo cerca de 80% de acurácia.
+
+c. Para cada instância do conjunto de teste, gere as predições das 1000 Árvores de Decisão e mantenha apenas a predição mais frequente. Você pode usar a função `mode()` do SciPy. Essa abordagem fornece as predições por voto majoritário no conjunto de teste.
+
+d. Avalie essas predições no conjunto de teste. Você deve obter uma acurácia um pouco maior que a do primeiro modelo, cerca de 0,5% a 1,5% maior. Com isso, você treinou manualmente um classificador de Floresta Aleatória.
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Foi criada uma floresta manual a partir de 1000 Árvores de Decisão. Primeiro, foram gerados 1000 subconjuntos aleatórios do conjunto de treinamento com `ShuffleSplit`, cada um contendo 100 instâncias. Em seguida, foi treinada uma árvore em cada subconjunto usando os melhores hiperparâmetros encontrados no exercício anterior.
+
+Cada árvore individual foi avaliada no conjunto de teste, obtendo em média cerca de 81,1% de acurácia, abaixo da árvore ajustada treinada com todo o conjunto de treinamento. Depois, as previsões das 1000 árvores foram combinadas por voto majoritário usando `mode()` do SciPy. Com essa agregação, a acurácia final subiu para aproximadamente 86,0%, um ganho de 0,5 ponto percentual em relação ao primeiro modelo, que tinha cerca de 85,5% de acurácia.
 </details>
 
 <details>
