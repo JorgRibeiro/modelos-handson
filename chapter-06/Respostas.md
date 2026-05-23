@@ -105,12 +105,19 @@ Se o número de características dobrar, então o tempo de treinamento também s
 ---
 
 
-### 7 - Treine e ajuste uma árvore no conjunto de dados moons.
+### 7 - Treine e aperfeiçoe uma Árvore de Decisão para o conjunto de dados moons seguindo estas etapas:
+###     a. Use make_moons(n_samples=1000, noise=0.4) para gerar um conjunto de treinamento moons.
+###     b. Utilize train_test_split() para dividir o conjunto de dados em conjunto de treinamento e conjunto de teste.
+###     c. Use grid search com validação cruzada (com a ajuda da classe GridSearchCV) a fim de encontrar bons valores de hiperparâmetros para DecisionTreeClassifier. Dica: experimente diversos valores para max_leaf_nodes.
+###     d. Treine-o em todo o conjunto de treinamento usando esses hiperparâmetros e avalie a performance do modelo no conjunto de teste. Você deve obter aproximadamente de 85% a 87% de acurácia.
+
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Foi gerado um conjunto de dados moons com `make_moons(n_samples=1000, noise=0.4)` e, em seguida, os dados foram divididos em treino e teste com `train_test_split`. Depois, foi usado `GridSearchCV` com validação cruzada para testar diferentes valores de `max_depth` e `max_leaf_nodes` em uma `DecisionTreeClassifier`.
+
+O melhor modelo encontrado foi avaliado no conjunto de teste usando `accuracy_score`, obtendo acurácia de aproximadamente 85,5%, dentro da faixa esperada pelo exercício. Também foi treinada uma árvore padrão, sem ajuste de hiperparâmetros, para comparação. A árvore ajustada teve desempenho melhor, mostrando que a busca de hiperparâmetros ajudou a reduzir o sobreajuste e melhorar a generalização.
 </details>
 
 <details>
