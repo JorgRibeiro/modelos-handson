@@ -2,12 +2,12 @@
 
 <!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
 
-### 1 - Qual é a profundidade aproximada de uma árvore de decisão treinada(sem restrições) em um conjunto de treinamento com 1 milhão de instâncias?
+### 1 - Qual é a profundidade aproximada de uma Árvore de Decisão treinada sem restrições em um conjunto de treinamento com 1 milhão de instâncias?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-Para uma árvore de decisão treinada **sem restrições**, a profundidade aproximada é `log2(m)`, em que `m` é o número de instâncias de treino. Para `m = 1.000.000`, temos `log2(1.000.000) ≈ 20`. Na prática, pode ser um pouco maior, porque a árvore geralmente não fica perfeitamente balanceada.
+Para uma Árvore de Decisão treinada **sem restrições**, a profundidade aproximada é `log2(m)`, em que `m` é o número de instâncias de treino. Para `m = 1.000.000`, temos `log2(1.000.000) ≈ 20`. Na prática, pode ser um pouco maior, porque a árvore geralmente não fica perfeitamente balanceada.
 </details>
 
 <details>
@@ -18,7 +18,7 @@ A profundidade de uma árvore binária bem balanceada contendo _m_ folhas é igu
 
 ---
 
-### 2 - A impureza de Gini de um nó costuma ser menor ou maior que a de seus pais? Geralmente é menor/maior ou sempre é maior/menor?
+### 2 - A impureza de Gini de um nó costuma ser menor ou maior que a de seu pai? Ela é sempre menor?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -40,12 +40,12 @@ Agora suponha que o conjunto de dados seja unidimensional e que as instâncias e
 
 ---
 
-### 3 - Caso uma árvore de decisão esteja sobreajustando o conjunto de treinamento, é uma boa ideia tentar diminuir o max_depth?.
+### 3 - Caso uma Árvore de Decisão esteja sobreajustando o conjunto de treinamento, é uma boa ideia tentar diminuir `max_depth`?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-Sim. Se uma árvore de decisão está sobreajustando o conjunto de treinamento, diminuir `max_depth` pode ajudar, pois limita a profundidade da árvore, reduz a complexidade do modelo e funciona como regularização. Com uma árvore menos profunda, as fronteiras de decisão tendem a ficar menos específicas ao conjunto de treino, o que pode melhorar a generalização.
+Sim. Se uma Árvore de Decisão está sobreajustando o conjunto de treinamento, diminuir `max_depth` pode ajudar, pois limita a profundidade da árvore, reduz a complexidade do modelo e funciona como regularização. Com uma árvore menos profunda, as fronteiras de decisão tendem a ficar menos específicas ao conjunto de treino, o que pode melhorar a generalização.
 </details>
 
 <details>
@@ -56,7 +56,7 @@ Se uma Árvore de Decisão estiver sobreajustando o conjunto de treinamento, pod
 
 ---
 
-### 4 - se uma árvore de decisão sbuajusta o conjunto de treinamento, é uma boa ideia escalonar as características de entrada?
+### 4 - Se uma Árvore de Decisão subajusta o conjunto de treinamento, é uma boa ideia escalonar as características de entrada?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -72,7 +72,7 @@ Não. Escalonar ou centralizar as características de entrada não deve resolver
 
 ---
 
-### 5 - Se leva uma hora para treinar uma árvore de decisão em um conjunto de reinamento contendo 1 milhão de instâncias, quanto tempo levara aproximadamente para treinar outra arvore de decisao em um conjunto de treinamento contrando 10 milhão de instâncias? Dica: considere a complexidade computacional do algoritmo CART
+### 5 - Se leva uma hora para treinar uma Árvore de Decisão em um conjunto de treinamento com 1 milhão de instâncias, quanto tempo levará aproximadamente para treinar outra Árvore de Decisão em um conjunto com 10 milhões de instâncias?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -121,7 +121,7 @@ d. Treine o modelo em todo o conjunto de treinamento usando esses hiperparâmetr
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-Foi gerado um conjunto de dados moons com `make_moons(n_samples=1000, noise=0.4)` e, em seguida, os dados foram divididos em treino e teste com `train_test_split`. Depois, foi usado `GridSearchCV` com validação cruzada para testar diferentes valores de `max_depth` e `max_leaf_nodes` em uma `DecisionTreeClassifier`.
+Foi gerado um conjunto de dados moons com `make_moons(n_samples=1000, noise=0.4)` e, em seguida, os dados foram divididos em treino e teste com `train_test_split`. Depois, foi usado `GridSearchCV` com validação cruzada para testar diferentes valores de `max_leaf_nodes` e de `max_depth` em uma `DecisionTreeClassifier`.
 
 O melhor modelo encontrado foi avaliado no conjunto de teste usando `accuracy_score`, obtendo acurácia de aproximadamente 85,5%, dentro da faixa esperada pelo exercício. Também foi treinada uma árvore padrão, sem ajuste de hiperparâmetros, para comparação. A árvore ajustada teve desempenho melhor, mostrando que a busca de hiperparâmetros ajudou a reduzir o sobreajuste e melhorar a generalização.
 </details>
