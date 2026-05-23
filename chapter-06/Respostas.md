@@ -72,18 +72,18 @@ Não. Escalonar ou centralizar as características de entrada não deve resolver
 
 ---
 
-### 5 - Perguntas conceituais sobre árvores de decisão.
+### 5 - Se leva uma hora para treinar uma árvore de decisão em um conjunto de reinamento contendo 1 milhão de instâncias, quanto tempo levara aproximadamente para treinar outra arvore de decisao em um conjunto de treinamento contrando 10 milhão de instâncias? Dica: considere a complexidade computacional do algoritmo CART
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Levará aproximadamente 11,7 horas. O tempo não aumenta apenas 10 vezes, porque a complexidade de treino de uma Árvore de Decisão pelo CART é aproximadamente _O_(_n_ x _m_ log2(_m_)), em que _n_ é o número de características e _m_ é o número de instâncias. Mantendo _n_ constante e aumentando _m_ de 1 milhão para 10 milhões, o fator de aumento fica perto de 11,7.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+A complexidade computacional para treinar uma Árvore de Decisão é _O_(_n_ x _m_ log2(_m_)). Então, se você multiplicar o tamanho do conjunto de treinamento por 10, o tempo de treinamento será multiplicado por `K = (n x 10m x log2(10m)) / (n x m x log2(m)) = 10 x log2(10m) / log2(m)`. Se _m_ = 10<sup>6</sup>, então _K_ ≈ 11,7. Portanto, você pode esperar que o tempo de treinamento seja aproximadamente 11,7 horas.
 </details>
 
 ---
