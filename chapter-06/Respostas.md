@@ -88,18 +88,18 @@ A complexidade computacional para treinar uma Árvore de Decisão é _O_(_n_ x _
 
 ---
 
-### 6 - Perguntas conceituais sobre árvores de decisão.
+### 6 - Se leva uma hora para treinar uma Árvore de Decisão em determinado conjunto de treinamento, aproximadamente quanto tempo levará se você dobrar o número de características?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Irá demorar aproximadamente o dobro do tempo, ou seja, cerca de 2 horas. Isso acontece porque a complexidade de treinamento do algoritmo CART é aproximadamente _O_(_n_ x _m_ log2(_m_)), em que _n_ é o número de características e _m_ é o número de instâncias. Se apenas _n_ dobra, mantendo _m_ igual, o tempo de treinamento também tende a dobrar.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam profundidade da árvore, impureza, fronteiras de decisão, probabilidades em folhas, regularização, escalonamento e alta variância.
+Se o número de características dobrar, então o tempo de treinamento também será aproximadamente dobrado.
 </details>
 
 ---
