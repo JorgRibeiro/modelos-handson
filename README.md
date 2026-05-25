@@ -61,6 +61,8 @@ modelos-handson/
 
 ## Capítulos
 
+### Parte I - Fundamentos do Aprendizado de Maquina
+
 | # | Capítulo | Conteudo principal | Status |
 |---|----------|--------------------|--------|
 | [01](chapter-01/README.md) | The Machine Learning Landscape | Fundamentos de ML, tipos de aprendizado, generalizacao, sobreajuste, subajuste, regressao linear e regularizacao. | ✅ Concluido |
@@ -69,9 +71,14 @@ modelos-handson/
 | [04](chapter-04/README.md) | Training Linear Models | Regressao linear, Equacao Normal, gradiente descendente, regressao polinomial, curvas de aprendizado, regularizacao, parada antecipada, regressao logistica e Softmax. | ✅ Implementado; revisao pendente |
 | [05](chapter-05/README.md) | Support Vector Machines | SVMs para classificacao e regressao, margem larga, margem suave, escalonamento, kernels polinomiais/RBF, atributos de similaridade e ajuste de hiperparametros. | ✅ Concluido |
 | [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao, visualizacao, probabilidades por folha, regularizacao, sensibilidade a rotacao, alta variancia e floresta manual por voto majoritario. | ✅ Concluido |
-| [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Ensembles, bagging, boosting e florestas aleatorias. | ⏳ Planejado |
-| [08](chapter-08/README.md) | Dimensionality Reduction | PCA, reducao de dimensionalidade e visualizacao. | ⏳ Planejado |
-| [09](chapter-09/README.md) | Unsupervised Learning | Clustering, mistura gaussiana e deteccao de anomalias. | ⏳ Planejado |
+| [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Votacao, bagging, pasting, out-of-bag, Random Forests, importancia de atributos, boosting, gradient boosting e stacking. | ✅ Notebook estruturado; exercicios pendentes |
+| [08](chapter-08/README.md) | Dimensionality Reduction | PCA, variancia explicada, compressao, PCA randomizado, PCA incremental, projecao aleatoria, LLE e Kernel PCA. | ✅ Notebook estruturado; exercicios pendentes |
+| [09](chapter-09/README.md) | Unsupervised Learning | Clustering, K-Means, segmentacao de imagens, aprendizado semissupervisionado, DBSCAN, misturas Gaussianas, deteccao de anomalias e modelos Bayesianos. | ✅ Notebook estruturado; exercicios pendentes |
+
+### Parte II - Redes Neurais e Aprendizado Profundo
+
+| # | Capítulo | Conteudo principal | Status |
+|---|----------|--------------------|--------|
 | [10](chapter-10/README.md) | Neural Nets with Keras | Redes neurais com Keras. | ⏳ Planejado |
 | [11](chapter-11/README.md) | Training Deep Neural Networks | Treinamento de redes profundas. | ⏳ Planejado |
 | [12](chapter-12/README.md) | Custom Models and Training with TensorFlow | Modelos e loops customizados com TensorFlow. | ⏳ Planejado |
@@ -147,7 +154,8 @@ Cada pasta de capitulo pode conter:
 - Capitulo 4 implementado com treinamento de modelos lineares, metodos de gradiente, regularizacao, regressao logistica, Softmax e exercicio de Softmax do zero com NumPy. O resumo textual do exercicio 12 ainda precisa de revisao final.
 - Capitulo 5 concluido com SVMs para classificacao e regressao, comparacao entre implementacoes lineares, classificacao Wine e `SVR` no California Housing.
 - Capitulo 6 concluido com Arvores de Decisao, visualizacao, regularizacao, ajuste no conjunto moons e floresta manual com 1000 arvores por voto majoritario.
-- Capitulos 7 a 19 permanecem planejados para revisao e consolidacao progressiva.
+- Capitulos 7 a 9 possuem notebooks principais estruturados, mas ainda aguardam revisao conceitual e exercicios completos.
+- Capitulos 10 a 19 permanecem planejados para revisao e consolidacao progressiva.
 
 ## Agente de Aprendizado
 
