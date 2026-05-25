@@ -13,8 +13,11 @@ modelos-handson/
 │   ├── Respostas.md
 │   └── README.md
 ├── chapter-02/
-│   ├── 02_Projeto_End_to_End_de_Machine_Learning.ipynb
-│   ├── 02_Resposta_exercicio*.ipynb
+│   ├── 02_End_to_End_de_Machine_Learning.ipynb
+│   ├── exercicios/
+│   │   └── 02_exercicio*.ipynb
+│   ├── datasets/
+│   ├── images/
 │   ├── Respostas.md
 │   └── README.md
 ├── chapter-03/
@@ -26,6 +29,27 @@ modelos-handson/
 │   │   ├── 03_exercicio4.ipynb
 │   │   ├── titanic/
 │   │   └── emails/
+│   ├── images/
+│   ├── Respostas.md
+│   └── README.md
+├── chapter-04/
+│   ├── 04_training_linear_models.ipynb
+│   ├── 04_exercicio12.ipynb
+│   ├── images/
+│   ├── Respostas.md
+│   └── README.md
+├── chapter-05/
+│   ├── 05_support_vector_machines.ipynb
+│   ├── 05_exercicio_9.ipynb
+│   ├── 05_exercicio_10.ipynb
+│   ├── 05_exercicio_11.ipynb
+│   ├── images/
+│   ├── Respostas.md
+│   └── README.md
+├── chapter-06/
+│   ├── 06_decision_trees.ipynb
+│   ├── 06_exercicio_7.ipynb
+│   ├── 06_exercicio_8.ipynb
 │   ├── images/
 │   ├── Respostas.md
 │   └── README.md
@@ -41,10 +65,10 @@ modelos-handson/
 |---|----------|--------------------|--------|
 | [01](chapter-01/README.md) | The Machine Learning Landscape | Fundamentos de ML, tipos de aprendizado, generalizacao, sobreajuste, subajuste, regressao linear e regularizacao. | ✅ Concluido |
 | [02](chapter-02/README.md) | End-to-End Machine Learning Project | Projeto completo com California Housing Prices, EDA, pipelines, validacao cruzada, busca de hiperparametros, avaliacao final e persistencia. | ✅ Concluido |
-| [03](chapter-03/README.md) | Classification | Classificacao com MNIST, metricas, validacao cruzada, GridSearchCV, Titanic e detector de Spam/Ham com pipeline de texto. | ✅ Implementado |
-| [04](chapter-04/README.md) | Training Linear Models | Regressao linear, gradiente descendente, regressao logistica e softmax. | ⏳ Planejado |
-| [05](chapter-05/README.md) | Support Vector Machines | SVM para classificacao, regressao e kernels. | ⏳ Planejado |
-| [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao. | ⏳ Planejado |
+| [03](chapter-03/README.md) | Classification | Classificacao com MNIST, metricas, validacao cruzada, GridSearchCV, Titanic e detector de Spam/Ham com pipeline de texto. | ✅ Implementado; revisao pendente |
+| [04](chapter-04/README.md) | Training Linear Models | Regressao linear, Equacao Normal, gradiente descendente, regressao polinomial, curvas de aprendizado, regularizacao, parada antecipada, regressao logistica e Softmax. | ✅ Implementado; revisao pendente |
+| [05](chapter-05/README.md) | Support Vector Machines | SVMs para classificacao e regressao, margem larga, margem suave, escalonamento, kernels polinomiais/RBF, atributos de similaridade e ajuste de hiperparametros. | ✅ Concluido |
+| [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao, visualizacao, probabilidades por folha, regularizacao, sensibilidade a rotacao, alta variancia e floresta manual por voto majoritario. | ✅ Concluido |
 | [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Ensembles, bagging, boosting e florestas aleatorias. | ⏳ Planejado |
 | [08](chapter-08/README.md) | Dimensionality Reduction | PCA, reducao de dimensionalidade e visualizacao. | ⏳ Planejado |
 | [09](chapter-09/README.md) | Unsupervised Learning | Clustering, mistura gaussiana e deteccao de anomalias. | ⏳ Planejado |
@@ -118,9 +142,12 @@ Cada pasta de capitulo pode conter:
 ## Progresso Atual
 
 - Capitulo 1 concluido com notebook principal, figuras e respostas teoricas.
-- Capitulo 2 concluido com projeto fim a fim, seis notebooks de exercicios e comparacao numerica dos resultados.
-- Capitulo 3 implementado com notebook principal de classificacao, quatro exercicios praticos, datasets Titanic e SpamAssassin, validacao cruzada, GridSearchCV e avaliacao final de modelos.
-- Capitulos 4 a 19 permanecem planejados para revisao e consolidacao progressiva.
+- Capitulo 2 concluido com projeto fim a fim, seis notebooks de exercicios em `exercicios/` e comparacao numerica dos resultados.
+- Capitulo 3 implementado com notebook principal de classificacao, quatro exercicios praticos, datasets Titanic e SpamAssassin, validacao cruzada, GridSearchCV e avaliacao final de modelos. As respostas discursivas ainda precisam de revisao final.
+- Capitulo 4 implementado com treinamento de modelos lineares, metodos de gradiente, regularizacao, regressao logistica, Softmax e exercicio de Softmax do zero com NumPy. O resumo textual do exercicio 12 ainda precisa de revisao final.
+- Capitulo 5 concluido com SVMs para classificacao e regressao, comparacao entre implementacoes lineares, classificacao Wine e `SVR` no California Housing.
+- Capitulo 6 concluido com Arvores de Decisao, visualizacao, regularizacao, ajuste no conjunto moons e floresta manual com 1000 arvores por voto majoritario.
+- Capitulos 7 a 19 permanecem planejados para revisao e consolidacao progressiva.
 
 ## Agente de Aprendizado
 
@@ -130,4 +157,4 @@ Este repositorio conta com um agente de orientacao personalizado (`.agent.md`) p
 
 Este repositorio segue a licenca do material original e serve a propositos educacionais.
 
-**Ultima atualizacao geral**: 14 de maio de 2026
+**Ultima atualizacao geral**: 24 de maio de 2026
