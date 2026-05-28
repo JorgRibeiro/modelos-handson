@@ -1,6 +1,6 @@
 # Perguntas e Exercícios - Capítulo 3
 
-<!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
+<!-- Clique em "Minha Resposta" ou "Resposta do Livro" para expandir. -->
 
 ### 1 - Tente construir um classificador para o MNIST com mais de 97% de acurácia.
 
@@ -26,7 +26,7 @@ O modelo final ficou acima da meta de 97% de acurácia.
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 O livro sugere usar `KNeighborsClassifier` e ajustar hiperparâmetros como `weights` e `n_neighbors`, por exemplo com `GridSearchCV`, para ultrapassar 97% de acurácia no conjunto de teste.
 </details>
@@ -56,7 +56,7 @@ Esse resultado melhorou a acurácia do exercício anterior, que havia sido `0.97
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 A ideia é criar cópias deslocadas das imagens para cima, baixo, esquerda e direita, aumentando o conjunto de treino. Depois, treina-se novamente o classificador e compara-se o desempenho.
 </details>
@@ -114,7 +114,7 @@ O melhor modelo neste exercício foi o `RandomForestClassifier`.
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 O exercício propõe criar um encadeamento de preparação para atributos numéricos e categóricos, treinar um classificador e avaliar a previsão de sobrevivência dos passageiros.
 </details>
@@ -194,7 +194,7 @@ O relatório final ficou com `precision=0.96`, `recall=0.93` e `f1-score=0.94` p
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 O objetivo é baixar um conjunto de emails, separar treino/teste, transformar textos em atributos numéricos e treinar um classificador capaz de distinguir spam de emails legítimos.
 </details>
