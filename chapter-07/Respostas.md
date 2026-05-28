@@ -91,6 +91,25 @@ Ao construir uma árvore em uma floresta aleatória, apenas um subconjunto aleat
 </details>
 
 ---
+
+### 6 - Se o seu ensemble do AdaBoost subajusta os dados de treinamento, quais hiperparâmetros você deve ajustar e como?
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+Se um ensemble do AdaBoost está subajustando os dados de treinamento, podemos tentar aumentar o número de estimadores. Também podemos reduzir a regularização do estimador base, permitindo que cada modelo individual seja um pouco mais flexível.
+
+Outra opção é aumentar levemente a taxa de aprendizado, mas com cuidado, pois uma taxa muito alta pode prejudicar a generalização.
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+Se o seu ensemble do AdaBoost subajusta os dados de treinamento, você pode tentar aumentar o número de estimadores ou reduzir os hiperparâmetros de regularização do estimador base. Também pode tentar aumentar levemente a taxa de aprendizado.
+</details>
+
+---
+
 ### 8 - Treine um classificador por votação.
 
 <details>
