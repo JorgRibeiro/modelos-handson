@@ -36,6 +36,26 @@ Um classificador por votação rígida simplesmente conta os votos de cada class
 
 ---
 
+### 3 - É possível acelerar o treinamento de um ensemble de bagging distribuindo-o em diversos servidores? E quanto aos ensembles de pasting, boosting, florestas aleatórias ou stacking?
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+Sim. É possível acelerar o treinamento de um ensemble de bagging distribuindo seus preditores em diversos servidores, pois cada preditor é treinado de forma independente dos outros, geralmente usando subconjuntos diferentes do conjunto de treinamento.
+
+O mesmo vale para ensembles de pasting e florestas aleatórias, já que seus preditores também podem ser treinados em paralelo. Já em ensembles de boosting, o treinamento é sequencial, pois cada novo preditor depende dos resultados do preditor anterior. Por isso, distribuir o treinamento em vários servidores não traz o mesmo ganho.
+
+No caso de stacking, os preditores de uma mesma camada podem ser treinados em paralelo, mas uma camada só pode ser treinada depois que a camada anterior estiver concluída.
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+É perfeitamente possível acelerar o treinamento de um ensemble de bagging distribuindo-o entre vários servidores, pois cada preditor do ensemble é independente dos demais. O mesmo vale para ensembles de pasting e para florestas aleatórias, pelo mesmo motivo. No entanto, em um ensemble de boosting, cada preditor é construído com base no preditor anterior; portanto, o treinamento é necessariamente sequencial, e não há ganho ao distribuir esse treinamento entre vários servidores. Em relação aos ensembles de stacking, todos os preditores de uma mesma camada são independentes entre si, então podem ser treinados em paralelo em vários servidores. Porém, os preditores de uma camada só podem ser treinados depois que todos os preditores da camada anterior tiverem sido treinados.
+</details>
+
+---
+
 ### 8 - Treine um classificador por votação.
 
 <details>
