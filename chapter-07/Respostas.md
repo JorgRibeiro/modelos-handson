@@ -74,6 +74,23 @@ Com a avaliação out-of-bag, cada preditor em um ensemble de bagging é avaliad
 
 ---
 
+### 5 - O que faz com que os ensembles de árvores extras sejam mais aleatórios que as florestas aleatórias comuns? Como essa aleatoriedade extra pode ajudar? Os classificadores de árvores extras são mais lentos ou mais rápidos que as florestas aleatórias comuns?
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+Os ensembles de árvores extras são mais aleatórios porque, além de considerarem apenas um subconjunto aleatório de características em cada nó, eles também escolhem limites aleatórios para dividir os dados, em vez de procurar os melhores limites possíveis.
+
+Essa aleatoriedade extra funciona como uma forma de regularização. Ela pode ajudar quando uma floresta aleatória está sobreajustando os dados de treinamento, pois tende a reduzir a variância, embora possa aumentar o viés. Os classificadores de árvores extras costumam ser mais rápidos de treinar do que as florestas aleatórias, porque não precisam procurar os melhores limites de divisão. Porém, na hora de fazer predições, eles não são necessariamente mais rápidos nem mais lentos.
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+Ao construir uma árvore em uma floresta aleatória, apenas um subconjunto aleatório das características é considerado para a divisão em cada nó. Isso também acontece com as árvores extras, mas elas vão um passo além: em vez de procurar os melhores limites possíveis, como fazem as árvores de decisão comuns, elas usam limites aleatórios para cada característica. Essa aleatoriedade extra atua como uma forma de regularização: se uma floresta aleatória estiver sobreajustando os dados de treinamento, as árvores extras podem ter desempenho melhor. Além disso, como as árvores extras não procuram os melhores limites possíveis, elas são muito mais rápidas de treinar do que as florestas aleatórias. No entanto, ao fazer predições, elas não são nem mais rápidas nem mais lentas que as florestas aleatórias.
+</details>
+
+---
 ### 8 - Treine um classificador por votação.
 
 <details>
