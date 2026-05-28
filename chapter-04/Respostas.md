@@ -230,7 +230,13 @@ Se você quer classificar fotos como externas/internas e diurnas/noturnas, como 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Implementei a regressão Softmax do zero usando NumPy, sem usar o Scikit-Learn para o treinamento. Usei o conjunto de dados Iris, considerando o comprimento e a largura das pétalas como atributos, e adicionei manualmente o termo de viés.
+
+Primeiro, dividi os dados em conjuntos de treino, validação e teste. Depois, converti os rótulos para one-hot encoding, normalizei os atributos com base na média e no desvio padrão do conjunto de treino e implementei a função Softmax para transformar as pontuações dos modelos em probabilidades.
+
+O treinamento foi feito com descida do gradiente em lote. Em cada época, calculei as pontuações, as probabilidades, o erro em relação aos rótulos one-hot, os gradientes da entropia cruzada e atualizei os pesos. Também adicionei regularização L2 aos pesos, sem regularizar o termo de viés.
+
+Por fim, implementei a parada antecipada usando o conjunto de validação: a cada época, calculei a perda de validação e interrompi o treinamento quando essa perda parou de melhorar. No experimento, a parada antecipada ocorreu por volta da época 282. A acurácia no conjunto de validação ficou em aproximadamente 93,3%, e a acurácia no conjunto de teste ficou em aproximadamente 96,7%.
 
 </details>
 
