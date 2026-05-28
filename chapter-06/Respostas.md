@@ -1,6 +1,6 @@
 # Perguntas e Exercícios - Capítulo 6
 
-<!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
+<!-- Clique em "Minha Resposta" ou "Resposta do Livro" para expandir. -->
 
 ### 1 - Qual é a profundidade aproximada de uma Árvore de Decisão treinada sem restrições em um conjunto de treinamento com 1 milhão de instâncias?
 
@@ -11,7 +11,7 @@ Para uma Árvore de Decisão treinada **sem restrições**, a profundidade aprox
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 A profundidade de uma árvore binária bem balanceada contendo _m_ folhas é igual a log₂(_m_), arredondado para cima. log₂ é o logaritmo binário; log₂(_m_) = log(_m_) / log(2). Uma Árvore de Decisão binária, isto é, uma árvore que toma apenas decisões binárias, como ocorre com todas as árvores no Scikit-Learn, terminará mais ou menos bem balanceada ao final do treinamento, com uma folha por instância de treinamento se for treinada sem restrições. Portanto, se o conjunto de treinamento contém um milhão de instâncias, a Árvore de Decisão terá profundidade log₂(10<sup>6</sup>) ≈ 20, na verdade um pouco maior, já que a árvore geralmente não será perfeitamente balanceada.
 </details>
@@ -29,7 +29,7 @@ Mas isso não é sempre verdade para cada filho individualmente. Um dos nós fil
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 A impureza de Gini de um nó geralmente é menor que a de seu pai. Isso acontece por causa da função de custo do algoritmo CART, que divide cada nó de uma forma que minimiza a soma ponderada das impurezas de Gini dos seus filhos.
 
@@ -49,7 +49,7 @@ Sim. Se uma Árvore de Decisão está sobreajustando o conjunto de treinamento, 
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se uma Árvore de Decisão estiver sobreajustando o conjunto de treinamento, pode ser uma boa ideia diminuir `max_depth`, pois isso restringirá o modelo, regularizando-o.
 </details>
@@ -65,7 +65,7 @@ Não. Escalonar ou centralizar as características de entrada não deve resolver
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Árvores de Decisão não se importam se os dados de treinamento estão escalonados ou centralizados; essa é uma das vantagens delas. Portanto, se uma Árvore de Decisão está subajustando o conjunto de treinamento, escalonar as características de entrada será apenas uma perda de tempo.
 </details>
@@ -81,7 +81,7 @@ Levará aproximadamente 11,7 horas. O tempo não aumenta apenas 10 vezes, porque
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 A complexidade computacional para treinar uma Árvore de Decisão é _O_(_n_ x _m_ log2(_m_)). Então, se você multiplicar o tamanho do conjunto de treinamento por 10, o tempo de treinamento será multiplicado por `K = (n x 10m x log2(10m)) / (n x m x log2(m)) = 10 x log2(10m) / log2(m)`. Se _m_ = 10<sup>6</sup>, então _K_ ≈ 11,7. Portanto, você pode esperar que o tempo de treinamento seja aproximadamente 11,7 horas.
 </details>
@@ -97,7 +97,7 @@ Irá demorar aproximadamente o dobro do tempo, ou seja, cerca de 2 horas. Isso a
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se o número de características dobrar, então o tempo de treinamento também será aproximadamente dobrado.
 </details>
@@ -127,7 +127,7 @@ O melhor modelo encontrado foi avaliado no conjunto de teste usando `accuracy_sc
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 O exercício propõe gerar um conjunto com `make_moons`, dividir treino/teste, usar busca de hiperparâmetros em `DecisionTreeClassifier` e medir o desempenho no conjunto de teste.
 </details>
@@ -155,7 +155,7 @@ Cada árvore individual foi avaliada no conjunto de teste, obtendo em média cer
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 A ideia é treinar várias árvores em subconjuntos aleatórios do treino, combinar suas previsões por votação majoritária e observar como a agregação melhora a estabilidade.
 </details>

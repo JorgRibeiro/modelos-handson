@@ -37,7 +37,7 @@ O `SVR` é uma boa opção para testar, mas neste conjunto de dados ele costuma 
 
 Na comparação com o exercício 2, este resultado mostra a limitação de uma grade pequena: ela não encontrou a região de hiperparâmetros muito melhor que a busca aleatória encontrou.
 
-### Resposta Oficial - Resumo
+### Resposta do Livro
 
 O livro propõe usar `GridSearchCV` com kernels `linear` e `rbf`. A conclusão principal é que o `SVR` pode ser ajustado, mas não supera facilmente a floresta aleatória usada no projeto principal.
 
@@ -66,7 +66,7 @@ Ela não garante testar todas as combinações, mas isso é justamente a vantage
 
 Neste conjunto de exercícios, foi a melhor abordagem numérica. A busca aleatória encontrou uma região de hiperparâmetros que a grade simples do exercício 1 não testava.
 
-### Resposta Oficial - Resumo
+### Resposta do Livro
 
 O livro usa `RandomizedSearchCV` para mostrar que a busca aleatória pode encontrar boas combinações de hiperparâmetros com menos rigidez que a busca em grade.
 
@@ -102,7 +102,7 @@ Comparada aos exercícios 1 e 2, essa abordagem mexe mais na representação dos
 
 Na comparação direta com o exercício 2, o `SelectFromModel` não trouxe ganho: o RMSE de teste ficou praticamente igual, ligeiramente pior. Isso sugere que os atributos removidos ainda carregavam informação útil, ou que o limiar `threshold=0.005` não era o ideal.
 
-### Resposta Oficial - Resumo
+### Resposta do Livro
 
 O livro mostra que `SelectFromModel` não parece melhorar muito nesse caso. A observação importante é que o limiar usado pode não ser ideal, então seria possível ajustá-lo com busca em grade ou busca aleatória.
 
@@ -136,7 +136,7 @@ Na prática, o livro observa que essa ideia tende a ficar pior que a abordagem d
 
 Numericamente, este foi o pior resultado entre os exercícios com RMSE. O motivo provável é que uma única predição baseada só em vizinhos geográficos perdeu informação que a etapa original de similaridade por clusters representava melhor.
 
-### Resposta Oficial - Resumo
+### Resposta do Livro
 
 O livro implementa uma classe genérica que aceita qualquer regressor, não apenas KNN. Depois substitui a etapa geográfica do `ColumnTransformer` por esse novo transformador.
 
@@ -174,7 +174,7 @@ A desvantagem é o custo. `GridSearchCV` cresce rapidamente: poucos valores a ma
 
 Comparado ao exercício 4, a busca em grade melhorou muito a característica geográfica com KNN. Mesmo assim, o resultado ainda ficou pior que o exercício 2, então a otimização da preparação não compensou a perda causada por trocar a similaridade por clusters.
 
-### Resposta Oficial - Resumo
+### Resposta do Livro
 
 O livro usa busca automática para testar parâmetros do novo transformador geográfico e do `SVR`. A conclusão é que a característica KNN ainda pode não superar a similaridade por clusters, mas o exercício ensina como expor opções de preparação para busca.
 
@@ -209,6 +209,6 @@ Em termos de modelagem, ele não compete com `SVR`, `RandomForest`, `SelectFromM
 
 Na comparação geral, este exercício deve ser avaliado pela correção da API, não por RMSE. Ele ficou completo para o objetivo proposto.
 
-### Resposta Oficial - Resumo
+### Resposta do Livro
 
 O livro implementa um clone do `StandardScaler`, adicionando `inverse_transform()` e suporte a nomes de atributos. A classe deve conseguir passar nos testes básicos da API do Scikit-Learn.

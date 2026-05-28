@@ -1,6 +1,6 @@
 # Perguntas e Exercícios - Capítulo 4
 
-<!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
+<!-- Clique em "Minha Resposta" ou "Resposta do Livro" para expandir. -->
 
 ### 1 - Qual algoritmo de treinamento de regressao linear podemos utilizar se temos um conjunto de treinamento com milhoes de caracteristicas?.
 
@@ -13,7 +13,7 @@ A Equação Normal e a decomposição SVD são muito custosas quando a quantidad
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se você tem um conjunto de treinamento com milhões de características, pode usar a descida do gradiente estocástica ou a descida do gradiente em mini-lotes, e talvez a descida do gradiente em lote se o conjunto de treinamento couber na memória. Mas você não pode usar a Equação Normal nem a abordagem por SVD, porque a complexidade computacional cresce rapidamente, mais do que quadraticamente, com o número de características.
 
@@ -33,7 +33,7 @@ A melhor alternativa para contornar esse problema é garantir que os dados tenha
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se as características do conjunto de treinamento tiverem escalas muito diferentes, a função de custo terá o formato de uma tigela alongada, então os algoritmos de descida do gradiente levarão muito tempo para convergir. Para resolver isso, você deve escalonar os dados antes de treinar o modelo. Observe que a Equação Normal ou a abordagem por SVD funcionam sem problemas mesmo sem escalonamento. Além disso, modelos regularizados podem convergir para uma solução subótima se as características não forem escalonadas: como a regularização penaliza pesos grandes, características com valores menores tendem a ser ignoradas em comparação com características com valores maiores.
 
@@ -51,7 +51,7 @@ Não, pois a função de custo é convexa. O gradiente descendente converge para
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 O gradiente descendente não pode ficar preso em um mínimo local ao treinar um modelo de regressão logística, porque a função de custo é convexa. _Convexa_ significa que, se você desenhar uma linha reta entre dois pontos quaisquer da curva, essa linha nunca cruza a curva.
 
@@ -69,7 +69,7 @@ Todos os algoritmos chegam perto do mínimo, mas não necessariamente ao mesmo m
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se o problema de otimização for convexo, como na regressão linear ou na regressão logística, e assumindo que a taxa de aprendizado não seja alta demais, todos os algoritmos de descida do gradiente se aproximarão do ótimo global e acabarão produzindo modelos bastante parecidos. No entanto, a menos que você reduza gradualmente a taxa de aprendizado, a descida do gradiente estocástica e a descida do gradiente em mini-lotes nunca convergirão de verdade; em vez disso, continuarão saltando para frente e para trás ao redor do ótimo global. Isso significa que, mesmo que você os execute por muito tempo, esses algoritmos de descida do gradiente produzirão modelos ligeiramente diferentes.
 
@@ -89,7 +89,7 @@ Mas, se o erro de treinamento não estiver aumentando, então o modelo provavelm
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se o erro de validação aumenta consistentemente após cada época, uma possibilidade é que a taxa de aprendizado esteja alta demais e o algoritmo esteja divergindo. Se o erro de treinamento também estiver aumentando, então esse é claramente o problema, e você deve reduzir a taxa de aprendizado. No entanto, se o erro de treinamento não estiver aumentando, então o modelo está sofrendo overfitting no conjunto de treinamento, e você deve parar o treinamento.
 
@@ -109,7 +109,7 @@ O melhor é esperar um tempo sem melhora e manter salvo o melhor modelo encontra
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Devido à sua natureza aleatória, nem a descida do gradiente estocástica nem a descida do gradiente em mini-lotes têm garantia de progresso em cada iteração de treinamento. Portanto, se você parar o treinamento imediatamente quando o erro de validação aumentar, poderá parar cedo demais, antes que o ótimo seja alcançado. Uma opção melhor é salvar o modelo em intervalos regulares; então, quando ele não melhorar por bastante tempo, o que significa que provavelmente não baterá mais o melhor resultado, você pode voltar ao melhor modelo salvo.
 
@@ -127,7 +127,7 @@ O algoritmo que concilia tempo e precisão é o GD em minibatch, pois ele utiliz
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 A descida do gradiente estocástica tem a iteração de treinamento mais rápida, pois considera apenas uma instância de treinamento por vez. Por isso, geralmente é a primeira a chegar à vizinhança do ótimo global, ou então a descida do gradiente em mini-lotes com um tamanho de mini-lote muito pequeno. No entanto, apenas a descida do gradiente em batch realmente convergirá, dado tempo de treinamento suficiente. Como mencionado, a descida do gradiente estocástica e a descida do gradiente em mini-lotes ficarão saltando ao redor do ótimo, a menos que você reduza gradualmente a taxa de aprendizado.
 
@@ -149,7 +149,7 @@ Provavelmente o modelo está sofrendo de overfitting. Entre as formas de resolve
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se o erro de validação é muito maior que o erro de treinamento, isso provavelmente acontece porque o modelo está sofrendo overfitting no conjunto de treinamento. Uma forma de tentar corrigir isso é reduzir o grau polinomial: um modelo com menos graus de liberdade tem menor chance de sofrer overfitting. Outra coisa que você pode tentar é regularizar o modelo, por exemplo, adicionando uma penalidade ℓ₂ (Ridge) ou uma penalidade ℓ₁ (Lasso) à função de custo. Isso também reduz os graus de liberdade do modelo. Por fim, você pode tentar aumentar o tamanho do conjunto de treinamento.
 
@@ -167,7 +167,7 @@ O modelo tem um viés alto. Você deve reduzir o hiperparâmetro alpha da regula
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se tanto o erro de treinamento quanto o erro de validação são quase iguais e bastante altos, o modelo provavelmente está sofrendo underfitting no conjunto de treinamento, o que significa que ele tem um viés alto. Você deve tentar reduzir o hiperparâmetro de regularização _α_.
 
@@ -193,7 +193,7 @@ c. Usaria a regressão Elastic Net em vez da Lasso quando eu quisesse combinar o
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Vejamos:
 
@@ -217,7 +217,7 @@ Nesse caso, as classes não são mutuamente exclusivas: uma foto pode ser extern
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 Se você quer classificar fotos como externas/internas e diurnas/noturnas, como essas classes não são exclusivas, isto é, todas as quatro combinações são possíveis, você deve treinar dois classificadores de regressão logística.
 
@@ -230,12 +230,18 @@ Se você quer classificar fotos como externas/internas e diurnas/noturnas, como 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Implementei a regressão Softmax do zero usando NumPy, sem usar o Scikit-Learn para o treinamento. Usei o conjunto de dados Iris, considerando o comprimento e a largura das pétalas como atributos, e adicionei manualmente o termo de viés.
+
+Primeiro, dividi os dados em conjuntos de treino, validação e teste. Depois, converti os rótulos para one-hot encoding, normalizei os atributos com base na média e no desvio padrão do conjunto de treino e implementei a função Softmax para transformar as pontuações dos modelos em probabilidades.
+
+O treinamento foi feito com descida do gradiente em lote. Em cada época, calculei as pontuações, as probabilidades, o erro em relação aos rótulos one-hot, os gradientes da entropia cruzada e atualizei os pesos. Também adicionei regularização L2 aos pesos, sem regularizar o termo de viés.
+
+Por fim, implementei a parada antecipada usando o conjunto de validação: a cada época, calculei a perda de validação e interrompi o treinamento quando essa perda parou de melhorar. No experimento, a parada antecipada ocorreu por volta da época 282. A acurácia no conjunto de validação ficou em aproximadamente 93,3%, e a acurácia no conjunto de teste ficou em aproximadamente 96,7%.
 
 </details>
 
 <details>
-<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+<summary><strong>Resposta do Livro</strong></summary>
 
 O exercício propõe implementar a regressão Softmax manualmente: calcular as pontuações, aplicar Softmax, computar a entropia cruzada, calcular gradientes, atualizar os pesos por descida do gradiente em lote e usar um conjunto de validação para aplicar parada antecipada.
 
