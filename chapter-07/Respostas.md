@@ -1,6 +1,6 @@
 # Perguntas e Exercícios - Capítulo 7
 
-<!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
+<!-- Clique em "Minha Resposta" ou "Resposta do Livro" para expandir. -->
 
 ### 1 - Se você treinou cinco modelos diferentes com exatamente os mesmos dados de treinamento e todos alcançaram 95% de precisão, há alguma chance de combinar esses modelos para obter melhores resultados? Em caso afirmativo, como? Se não, por quê?
 
