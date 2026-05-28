@@ -56,6 +56,24 @@ No caso de stacking, os preditores de uma mesma camada podem ser treinados em pa
 
 ---
 
+### 4 - Qual é a vantagem da avaliação OOB?
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+A principal vantagem da avaliação OOB é que ela permite estimar o desempenho de um ensemble de bagging sem precisar separar um conjunto de validação. Como cada preditor é treinado apenas em uma amostra do conjunto de treinamento, algumas instâncias ficam de fora do treino desse preditor. Essas instâncias OOB podem ser usadas para avaliá-lo.
+
+Com estimadores suficientes, cada instância tende a ser OOB para vários preditores. Assim, é possível combinar as predições desses preditores para obter uma avaliação razoavelmente imparcial do ensemble, mantendo mais dados disponíveis para o treinamento.
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+Com a avaliação out-of-bag, cada preditor em um ensemble de bagging é avaliado usando instâncias nas quais ele não foi treinado, pois elas ficaram de fora da sua amostra de treinamento. Isso permite obter uma avaliação razoavelmente imparcial do ensemble sem a necessidade de um conjunto de validação adicional. Assim, há mais instâncias disponíveis para o treinamento, e o ensemble pode ter um desempenho ligeiramente melhor.
+</details>
+
+---
+
 ### 8 - Treine um classificador por votação.
 
 <details>
