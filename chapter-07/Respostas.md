@@ -18,6 +18,24 @@ Se você treinou cinco modelos diferentes e todos alcançaram 95% de precisão, 
 
 ---
 
+### 2 - Qual é a diferença entre classificadores por votação rígida e votação suave?
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+Em um classificador por votação rígida, cada modelo vota em uma classe, e a classe mais votada é escolhida como a resposta final. Ou seja, a decisão considera apenas a classe prevista por cada modelo.
+
+Já em um classificador por votação suave, cada modelo informa as probabilidades estimadas para cada classe. Essas probabilidades são combinadas, geralmente pela média, e a classe com a maior probabilidade média é escolhida como resposta final. Esse método dá mais peso às predições em que os modelos estão mais confiantes, mas só funciona se todos os classificadores conseguirem estimar probabilidades.
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+Um classificador por votação rígida simplesmente conta os votos de cada classificador no ensemble e escolhe a classe que recebe mais votos. Um classificador por votação suave calcula a média das probabilidades estimadas por cada classificador para cada classe e escolhe a classe com a maior probabilidade. Isso dá mais peso aos votos de alta confiança e geralmente apresenta melhor desempenho, mas só funciona se todos os classificadores forem capazes de estimar probabilidades de classe. Por exemplo, em classificadores SVM no Scikit-Learn, é necessário definir `probability=True`.
+</details>
+
+---
+
 ### 8 - Treine um classificador por votação.
 
 <details>
