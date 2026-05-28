@@ -110,6 +110,24 @@ Se o seu ensemble do AdaBoost subajusta os dados de treinamento, você pode tent
 
 ---
 
+### 7 - Caso o seu ensemble de Gradient Boosting sobreajuste o conjunto de treinamento, você deve aumentar ou diminuir a taxa de aprendizado?
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+Se um ensemble de Gradient Boosting está sobreajustando o conjunto de treinamento, devemos diminuir a taxa de aprendizado. Uma taxa menor faz com que cada novo preditor contribua de forma mais gradual, o que pode melhorar a generalização.
+
+Também é possível usar early stopping para encontrar um número adequado de preditores, pois o sobreajuste pode indicar que há preditores demais no ensemble.
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+Se o seu ensemble de Gradient Boosting sobreajusta o conjunto de treinamento, você deve tentar diminuir a taxa de aprendizado. Também pode usar early stopping para encontrar o número adequado de preditores, pois provavelmente há preditores demais.
+</details>
+
+---
+
 ### 8 - Treine um classificador por votação.
 
 <details>
