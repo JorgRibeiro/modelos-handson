@@ -128,7 +128,7 @@ Se o seu ensemble de Gradient Boosting sobreajusta o conjunto de treinamento, vo
 
 ---
 
-### 8 - Carregue os dados MNIST e divida-os em um conjunto de treinamento, um conjunto de valudacao e um conjunto de teste.Em segiuda, treine varios classificadores, como um classificador de flortesta aleatoria, um classificador de arvores extras e um individual no conjunto de validacao, usando uma votacao suvae ou rigida. Depois de encotrar um, teste-o no conjunto de teste. qual e a melhoria de desempenho em coparacao com os calssificadores individuais?
+### 8 - Carregue os dados MNIST e divida-os em um conjunto de treinamento, um conjunto de validação e um conjunto de teste. Em seguida, treine vários classificadores, como um classificador de floresta aleatória, um classificador de árvores extras e outro classificador individual. Depois, tente combiná-los em um ensemble que supere cada classificador individual no conjunto de validação, usando votação suave ou rígida. Após encontrar um ensemble, teste-o no conjunto de teste. Qual é a melhoria de desempenho em comparação com os classificadores individuais?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
@@ -149,7 +149,7 @@ Por fim, avaliei todos os modelos no conjunto de teste e calculei a melhoria do 
 melhoria = acuracia_voting - acuracia_melhor_individual
 ```
 
-A melhoria exata depende das acurácias obtidas ao executar o notebook, mas normalmente o ensemble por votação melhora um pouco ou fica muito próximo do melhor modelo individual. Se os classificadores cometerem erros diferentes, a votação tende a ajudar mais.
+Ao executar o notebook, o melhor classificador individual no conjunto de teste foi o `ExtraTreesClassifier`, com acurácia de `0.9706`. O `VotingClassifier` obteve `0.9501`, ou seja, ficou `2.05` pontos percentuais abaixo do melhor classificador individual. Nesse caso, a votação suave não melhorou o resultado, provavelmente porque a `LogisticRegression` teve desempenho menor e acabou puxando a média das probabilidades para baixo.
 </details>
 
 <details>
@@ -160,12 +160,41 @@ O exercício propõe treinar vários classificadores no MNIST, combinar suas pre
 
 ---
 
-### 9 - Treine um ensemble com stacking.
+### 9 - Rode os classificadores individuais do exercício anterior para fazer predições no conjunto de validação e crie um novo conjunto de treinamento com as predições resultantes. Cada instância de treinamento deve ser um vetor que contém as predições de todos os classificadores para uma imagem, e o alvo deve ser a classe da imagem. Treine um classificador nesse novo conjunto de treinamento. Esse classificador é o preditor blender que, junto com os classificadores individuais, forma um ensemble de stacking. Agora, avalie o ensemble no conjunto de teste: para cada imagem do conjunto de teste, faça predições com todos os classificadores individuais e forneça essas predições ao blender para obter a predição final do ensemble. Como ele se compara com o classificador por votação do exercício anterior? Agora tente novamente usando `StackingClassifier`. A performance melhorou? Em caso afirmativo, por quê?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Usei os mesmos classificadores individuais do exercício 8 já treinados no conjunto de treinamento:
+
+- `RandomForestClassifier`
+- `ExtraTreesClassifier`
+- `LogisticRegression`
+
+Primeiro, fiz cada classificador prever as classes do conjunto de validação. Depois juntei essas predições em uma nova matriz, em que cada linha contém as respostas dos três modelos para uma imagem:
+
+```python
+X_valid_predictions = np.column_stack([
+    estimator.predict(X_valid)
+    for name, estimator in estimators
+])
+```
+
+Essa nova matriz virou o conjunto de treinamento do blender, e o alvo continuou sendo `y_valid`. Usei uma `RandomForestClassifier` como blender.
+
+Depois, para avaliar no conjunto de teste, fiz o mesmo processo: gerei as predições dos classificadores individuais em `X_test`, juntei tudo em uma matriz e passei essa matriz para o blender. Assim obtive a acurácia do stacking manual.
+
+Também testei com `StackingClassifier`, usando `cv="prefit"` para reaproveitar os classificadores já treinados no exercício 8. Nesse caso, usei `stack_method="predict_proba"`, então o blender recebe as probabilidades previstas pelos classificadores, não apenas a classe final. Isso geralmente dá mais informação ao blender.
+
+Ao executar o notebook, obtive os seguintes resultados no conjunto de teste:
+
+- `VotingClassifier`: `0.9501`
+- Stacking manual: `0.9679`
+- `StackingClassifier`: `0.9720`
+
+O stacking manual ficou `1.78` ponto percentual acima do `VotingClassifier`. Já o `StackingClassifier` ficou `2.19` pontos percentuais acima do `VotingClassifier` e `0.41` ponto percentual acima do stacking manual.
+
+A performance melhorou porque o blender aprendeu a combinar melhor as saídas dos classificadores individuais. No stacking manual, ele recebeu apenas as classes previstas por cada modelo. No `StackingClassifier`, ele recebeu as probabilidades previstas por cada classificador (`predict_proba`), o que fornece mais informação sobre a confiança de cada modelo. Por isso, o `StackingClassifier` conseguiu superar tanto o classificador por votação quanto o stacking manual.
 </details>
 
 <details>
