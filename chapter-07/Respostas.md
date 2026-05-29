@@ -128,18 +128,34 @@ Se o seu ensemble de Gradient Boosting sobreajusta o conjunto de treinamento, vo
 
 ---
 
-### 8 - Treine um classificador por votação.
+### 8 - Carregue os dados MNIST e divida-os em um conjunto de treinamento, um conjunto de valudacao e um conjunto de teste.Em segiuda, treine varios classificadores, como um classificador de flortesta aleatoria, um classificador de arvores extras e um individual no conjunto de validacao, usando uma votacao suvae ou rigida. Depois de encotrar um, teste-o no conjunto de teste. qual e a melhoria de desempenho em coparacao com os calssificadores individuais?
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Carreguei o MNIST, normalizei os pixels dividindo por 255 e separei os dados em três partes: 50.000 imagens para treinamento, 10.000 para validação e 10.000 para teste.
+
+Em seguida, treinei três classificadores individuais:
+
+- `RandomForestClassifier`
+- `ExtraTreesClassifier`
+- `LogisticRegression`
+
+Usei `LogisticRegression` no lugar de um `SVC`, pois o `SVC` pode demorar bastante no MNIST completo. Depois comparei os três modelos no conjunto de validação e criei um `VotingClassifier` com votação suave (`voting="soft"`), já que todos esses modelos conseguem estimar probabilidades com `predict_proba()`.
+
+Por fim, avaliei todos os modelos no conjunto de teste e calculei a melhoria do `VotingClassifier` em relação ao melhor classificador individual:
+
+```python
+melhoria = acuracia_voting - acuracia_melhor_individual
+```
+
+A melhoria exata depende das acurácias obtidas ao executar o notebook, mas normalmente o ensemble por votação melhora um pouco ou fica muito próximo do melhor modelo individual. Se os classificadores cometerem erros diferentes, a votação tende a ajudar mais.
 </details>
 
 <details>
 <summary><strong>Resposta do Livro</strong></summary>
 
-O exercício propõe treinar vários classificadores no MNIST, combinar suas previsões com `VotingClassifier` e comparar o ensemble com os modelos individuais.
+O exercício propõe treinar vários classificadores no MNIST, combinar suas previsões com `VotingClassifier` e comparar o ensemble com os modelos individuais. 
 </details>
 
 ---
