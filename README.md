@@ -71,7 +71,7 @@ modelos-handson/
 | [04](chapter-04/README.md) | Training Linear Models | Regressao linear, Equacao Normal, gradiente descendente, regressao polinomial, curvas de aprendizado, regularizacao, parada antecipada, regressao logistica e Softmax. | ✅ Implementado; revisao pendente |
 | [05](chapter-05/README.md) | Support Vector Machines | SVMs para classificacao e regressao, margem larga, margem suave, escalonamento, kernels polinomiais/RBF, atributos de similaridade e ajuste de hiperparametros. | ✅ Concluido |
 | [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao, visualizacao, probabilidades por folha, regularizacao, sensibilidade a rotacao, alta variancia e floresta manual por voto majoritario. | ✅ Concluido |
-| [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Votacao, bagging, pasting, out-of-bag, Random Forests, importancia de atributos, boosting, gradient boosting e stacking. | ✅ Notebook estruturado; exercicios pendentes |
+| [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Votacao, bagging, pasting, out-of-bag, Random Forests, importancia de atributos, boosting, gradient boosting e stacking. | ✅ Concluido |
 | [08](chapter-08/README.md) | Dimensionality Reduction | PCA, variancia explicada, compressao, PCA randomizado, PCA incremental, projecao aleatoria, LLE e Kernel PCA. | ✅ Notebook estruturado; exercicios pendentes |
 | [09](chapter-09/README.md) | Unsupervised Learning | Clustering, K-Means, segmentacao de imagens, aprendizado semissupervisionado, DBSCAN, misturas Gaussianas, deteccao de anomalias e modelos Bayesianos. | ✅ Notebook estruturado; exercicios pendentes |
 
