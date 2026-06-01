@@ -2,7 +2,119 @@
 
 <!-- Clique em "Minha Resposta" ou "Resposta Oficial (Resumo)" para expandir. -->
 
-### 1 a 8 - Perguntas conceituais sobre redução de dimensionalidade.
+### 1 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 2 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 3 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 4 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 5 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 6 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 7 - Perguntas conceituais sobre redução de dimensionalidade.
+
+<details>
+<summary><strong>Minha Resposta</strong></summary>
+
+*(Resposta em construção.)*
+</details>
+
+<details>
+<summary><strong>Resposta Oficial (Resumo)</strong></summary>
+
+As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+</details>
+
+---
+
+### 8 - Perguntas conceituais sobre redução de dimensionalidade.
 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
