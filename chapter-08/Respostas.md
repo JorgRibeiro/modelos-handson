@@ -127,13 +127,13 @@ Um bom algoritmo de redução de dimensionalidade elimina muitas dimensões sem 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Sim, pode fazer sentido encadear dois algoritmos de redução de dimensionalidade. Por exemplo, podemos usar PCA ou projeção aleatória para reduzir rapidamente muitas dimensões e, em seguida, aplicar um método mais lento, como o LLE. Isso pode diminuir o tempo de processamento e preservar uma representação útil dos dados. Embora cada etapa possa descartar informações, a perda não será necessariamente grande. Por isso, devemos avaliar se a combinação preserva as informações relevantes e oferece vantagens em relação ao uso de um único método.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+Sim. Um exemplo comum é aplicar primeiro PCA ou projeção aleatória para eliminar rapidamente um grande número de dimensões desnecessárias e, depois, usar um algoritmo mais lento, como o LLE. Essa abordagem em duas etapas pode produzir resultados semelhantes aos do LLE aplicado diretamente aos dados originais, mas em uma fração do tempo.
 </details>
 
 ---
