@@ -75,13 +75,13 @@ O PCA pode reduzir a dimensionalidade de muitos conjuntos de dados, mesmo quando
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Depende de como a variância está distribuída entre os componentes principais do conjunto de dados. Apenas saber que existem 1.000 dimensões não permite determinar quantas serão necessárias para preservar 95% da variância. Devemos escolher o menor número de componentes cuja variância explicada acumulada seja de pelo menos 95%. Podemos identificar esse número em um gráfico da variância explicada acumulada em função do número de componentes, sem precisar usar o método do cotovelo. 
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+Não é possível determinar um número exato sem conhecer os dados. Se os pontos estiverem quase perfeitamente alinhados, um único componente poderá preservar 95% da variância. Se a variância estiver distribuída igualmente entre as 1.000 dimensões, serão necessários 950 componentes. Assim, o menor número de componentes necessário para atingir esse limiar pode variar de 1 a 950, dependendo do conjunto de dados. O gráfico da variância explicada acumulada ajuda a identificar esse número.
 </details>
 
 ---
