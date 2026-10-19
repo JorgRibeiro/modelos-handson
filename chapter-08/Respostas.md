@@ -91,13 +91,17 @@ Não é possível determinar um número exato sem conhecer os dados. Se os ponto
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+- **PCA convencional:** eu usaria quando os dados coubessem na memória e o custo computacional fosse viável. É uma escolha geral para encontrar os componentes principais sem precisar processar os dados em lotes.
+- **PCA incremental:** eu usaria em conjuntos de dados que não coubessem inteiramente na memória ou em situações em que os dados chegassem continuamente. Ele permite atualizar a estimativa dos componentes principais por meio de lotes.
+- **PCA randomizado:** eu usaria quando os dados coubessem na memória e eu quisesse manter um número de componentes muito menor que o número de atributos originais. Ele aproxima os principais componentes e pode ser mais rápido que o PCA convencional nesse cenário.
+- **Projeção aleatória:** eu usaria em conjuntos com um número muito grande de atributos, quando fosse importante reduzir o custo computacional e preservar aproximadamente as distâncias entre os exemplos. A escolha não depende de eu conhecer pouco os dados: o método usa uma projeção aleatória em vez de buscar as direções de maior variância.
+
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+O PCA convencional é a escolha padrão quando os dados cabem na memória. O PCA incremental é útil quando o conjunto não cabe na memória ou quando é necessário processar novos dados à medida que chegam; em geral, é mais lento que o convencional. O PCA randomizado é indicado quando os dados cabem na memória e se deseja uma redução expressiva do número de dimensões, situação em que pode ser muito mais rápido. A projeção aleatória é especialmente útil para conjuntos com um número muito elevado de dimensões.
 </details>
 
 ---
