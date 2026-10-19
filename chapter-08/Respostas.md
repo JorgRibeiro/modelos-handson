@@ -27,13 +27,13 @@ As principais desvantagens são a perda de informação, que pode prejudicar o d
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+A maldição da dimensionalidade é o conjunto de dificuldades que surgem quando os dados têm muitas dimensões. À medida que o número de atributos aumenta, o espaço de possibilidades cresce rapidamente, e os exemplos disponíveis ficam mais esparsos e distantes uns dos outros. Assim, é necessário um volume muito maior de dados de treinamento para identificar padrões que generalizem bem. Sem dados suficientes, aumenta o risco de o modelo se sobreajustar ao conjunto de treinamento.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+A maldição da dimensionalidade se refere a problemas que aparecem em espaços de alta dimensionalidade e que não ocorrem, ou são menos relevantes, em espaços com poucas dimensões. Em aprendizado de máquina, uma manifestação comum é que vetores de alta dimensionalidade amostrados aleatoriamente tendem a ficar muito distantes uns dos outros. Isso aumenta o risco de sobreajuste e dificulta a identificação de padrões quando não há uma grande quantidade de dados de treinamento.
 </details>
 
 ---
