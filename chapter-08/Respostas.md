@@ -149,13 +149,35 @@ Sim. Um exemplo comum é aplicar primeiro PCA ou projeção aleatória para elim
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Implementação passo a passo e saídas completas: [08_exercicio_9.ipynb](08_exercicio_9.ipynb).
+
+Execução em 2026-10-19T16:52:48-03:00, com Python 3.11.14, NumPy 2.1.3 e scikit-learn 1.5.2; paralelismo limitado a 4.
+
+Foram usadas as primeiras 60.000 imagens do MNIST para treino e as 10.000 restantes para teste. O PCA foi ajustado apenas no treino, com `svd_solver="full"` e `whiten=False`. Os pixels foram convertidos para `float32`, sem padronização adicional.
+
+O PCA reduziu **784 para 154 dimensões**, preservando **95.0196%** da variância do treino. O ajuste levou **1.13 s**, a transformação do treino **0.11 s** e a do teste **0.01 s**.
+
+| Modelo | Dados | Dimensões | Treino (s) | Acurácia no teste | Total para treino (s) |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Floresta aleatória | Originais | 784 | 6.38 | 97.05% | 6.38 |
+| Floresta aleatória | PCA 95% | 154 | 19.11 | 94.88% | 20.34 |
+| SGDClassifier | Originais | 784 | 64.97 | 88.47% | 64.97 |
+| SGDClassifier | PCA 95% | 154 | 13.95 | 88.13% | 15.19 |
+
+O total para treino inclui o ajuste do PCA e a transformação do treino nas alternativas com redução; exclui carregamento e avaliação no teste. A floresta usou 100 árvores; o SGD usou `loss="hinge"`, `alpha=0.0001`, `max_iter=1000` e `tol=1e-3`. Todos os modelos usaram `random_state=42`.
+
+- **Floresta aleatória:** o treinamento do classificador com PCA foi **3.00× mais lento**; a acurácia mudou **-2.17 p.p.** O fator de aceleração incluindo o custo do PCA foi **0.31×** (acima de 1 indica ganho).
+- **SGDClassifier:** o treinamento do classificador com PCA foi **4.66× mais rápido**; a acurácia mudou **-0.34 p.p.** O fator de aceleração incluindo o custo do PCA foi **4.28×** (acima de 1 indica ganho).
+
+O SGD realizou 315 épocas nos dados originais e 175 nos reduzidos.
+
+**Conclusão:** reduzir dimensões não garante ganho de tempo nem de acurácia. As árvores podem ser prejudicadas pela mudança de representação; um modelo linear pode se beneficiar do menor número de atributos e de mudanças na convergência. Os resultados são de uma única execução, com parâmetros fixos, e os tempos variam conforme o computador e sua carga.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-O exercício propõe reduzir o MNIST com PCA, treinar um classificador e comparar tempo de treinamento e desempenho com o conjunto original.
+O experimento do autor mostra que PCA não garante treinamento mais rápido nem maior acurácia. Na floresta aleatória, a mudança de representação pode aumentar o tempo de treinamento e reduzir a acurácia. Já o SGDClassifier pode se beneficiar da redução do número de atributos. Os números e até a direção da mudança na acurácia dependem da execução e da configuração; a tabela acima registra os resultados obtidos neste projeto.
 </details>
 
 ---
