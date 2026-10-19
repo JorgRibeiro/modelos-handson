@@ -59,13 +59,13 @@ Em geral, não é possível reverter perfeitamente a redução de dimensionalida
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Sim, é possível aplicar PCA a um conjunto de dados altamente não linear. O PCA procura direções de maior variância e projeta os dados em um subespaço linear, podendo eliminar dimensões redundantes ou com pouca variância. Porém, ele não consegue representar diretamente uma estrutura curva. Por isso, dependendo dos dados e do número de dimensões mantidas, a redução pode perder muita informação.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+O PCA pode reduzir a dimensionalidade de muitos conjuntos de dados, mesmo quando são altamente não lineares, pois ainda pode eliminar dimensões desnecessárias. Entretanto, quando a estrutura dos dados é não linear e não há dimensões desnecessárias a descartar, como no exemplo do rolo suíço (Swiss roll), reduzir as dimensões com PCA pode causar perda excessiva de informação. Nesse exemplo, o objetivo é desenrolar a superfície, enquanto o PCA apenas a achata por meio de uma projeção linear.
 </details>
 
 ---
