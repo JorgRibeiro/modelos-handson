@@ -43,13 +43,13 @@ A maldição da dimensionalidade se refere a problemas que aparecem em espaços 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Depende do algoritmo utilizado. Alguns métodos, como o PCA, permitem reconstruir uma aproximação dos dados originais por meio de uma transformação inversa. Porém, como a redução de dimensionalidade geralmente descarta informações, essa reconstrução não costuma recuperar exatamente o conjunto original. Outros métodos, como o t-SNE, não oferecem uma transformação inversa direta.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+Em geral, não é possível reverter perfeitamente a redução de dimensionalidade, pois há perda de informação durante o processo. Alguns algoritmos, como o PCA, oferecem uma transformação inversa simples que permite reconstruir um conjunto de dados relativamente semelhante ao original. Outros, como o t-SNE, não oferecem esse procedimento.
 </details>
 
 ---
