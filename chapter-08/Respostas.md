@@ -111,13 +111,13 @@ O PCA convencional é a escolha padrão quando os dados cabem na memória. O PCA
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Podemos comparar o desempenho de um modelo treinado com os dados originais ao de outro treinado com os dados reduzidos, usando a mesma métrica e o mesmo conjunto de validação ou teste. A redução de dimensionalidade deve ser ajustada apenas nos dados de treinamento e depois aplicada aos demais conjuntos. Assim, avaliamos se ela preserva as informações relevantes para a tarefa. Quando o algoritmo oferece uma transformação inversa, também podemos medir o erro de reconstrução, comparando os dados reconstruídos com os originais.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-As perguntas revisam a maldição da dimensionalidade, projeção, variedades, PCA, variância explicada, compressão, PCA incremental e técnicas não lineares.
+Um bom algoritmo de redução de dimensionalidade elimina muitas dimensões sem perder informação demais. Quando o método oferece uma transformação inversa, podemos reconstruir os dados e medir o erro de reconstrução. Como nem todos os métodos permitem essa operação, outra opção é avaliar o desempenho de um modelo treinado com os dados reduzidos e compará-lo ao de um modelo treinado com os dados originais. Se a redução preservar as informações relevantes para a tarefa, o desempenho deverá ser semelhante. Essa comparação deve usar dados de validação ou teste, ajustando a redução de dimensionalidade apenas nos dados de treinamento.
 </details>
 
 ---
