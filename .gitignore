@@ -26,6 +26,7 @@ data/processed/
 *.parquet
 *.pkl
 *.pickle
+/chapter-08/my_mnist.mmap
 
 # Reports
 reports/figures/
