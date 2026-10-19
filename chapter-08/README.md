@@ -18,6 +18,7 @@ Estudar técnicas para reduzir o número de atributos preservando informação r
 |-------------|-----------|------------|
 | `08_dimensionality_reduction.ipynb` | Fluxo de redução de dimensionalidade: PCA, componentes principais, projeção, uso do Scikit-Learn, variância explicada, escolha do número de dimensões, compressão, PCA randomizado, PCA incremental, projeção aleatória, LLE e Kernel PCA. | Intermediário |
 | [08_exercicio_9.ipynb](08_exercicio_9.ipynb) | Experimento passo a passo no MNIST: comparação de floresta aleatória e SGDClassifier com e sem PCA, incluindo acurácia e tempos de treinamento e preparação. | Intermediário |
+| [08_exercicio_10.ipynb](08_exercicio_10.ipynb) | Visualização das primeiras 5.000 imagens do MNIST com t-SNE, números e miniaturas; comparação com PCA, LLE e MDS, medindo tempo e preservação de vizinhanças. | Intermediário |
 
 ## Roteiro de Estudo Recomendado
 
@@ -58,6 +59,7 @@ source ../.venv/bin/activate.fish
 
 - **Perguntas do Capítulo 8**: as soluções finais foram deixadas fora do notebook principal e serão organizadas em `Respostas.md`.
 - **Exercício 9**: implementação em [08_exercicio_9.ipynb](08_exercicio_9.ipynb), com resultados da execução em [Respostas.md](Respostas.md#9---compare-classificadores-no-mnist-com-e-sem-pca).
+- **Exercício 10**: implementação em [08_exercicio_10.ipynb](08_exercicio_10.ipynb), com resultados e figuras em [Respostas.md](Respostas.md#10---visualize-o-mnist-com-t-sne-e-compare-outras-técnicas).
 
 ## Status de Conclusão
 

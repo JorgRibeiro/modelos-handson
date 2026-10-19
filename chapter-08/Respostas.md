@@ -191,11 +191,44 @@ O experimento do autor mostra que PCA não garante treinamento mais rápido nem 
 <details>
 <summary><strong>Minha Resposta</strong></summary>
 
-*(Resposta em construção.)*
+Implementação passo a passo e saídas completas: [08_exercicio_10.ipynb](08_exercicio_10.ipynb).
+
+Execução em 2026-10-19T16:57:57-03:00, com Python 3.11.14, NumPy 2.1.3 e scikit-learn 1.5.2. Foram usadas as **primeiras 5.000 imagens do MNIST**, com 784 pixels em `float32`, sem padronização adicional. Todos os métodos geraram duas coordenadas, sem usar os rótulos no ajuste.
+
+| Método | Tempo de ajuste e transformação (s) | Trustworthiness (10 vizinhos) |
+| --- | ---: | ---: |
+| t-SNE | 7.30 | 0.9532 |
+| PCA | 0.17 | 0.7429 |
+| LLE | 2.68 | 0.8126 |
+| MDS | 79.61 | 0.7981 |
+
+A qualidade de vizinhança foi medida na mesma amostra aleatória de 1.000 imagens para todos os métodos (semente 42); os ajustes usaram as 5.000 imagens. Tempos de carregamento, avaliação e criação das figuras não estão incluídos. Os números representam uma única execução.
+
+O PCA em 2D preservou **17.27%** da variância. O t-SNE usou perplexidade 30, inicialização por PCA, taxa de aprendizado automática e até 1.000 iterações. O LLE usou 10 vizinhos e o método padrão. O MDS métrico usou uma inicialização, até 300 iterações e `eps=1e-3`, executando **300 iterações**. t-SNE, LLE e MDS usaram `random_state=42`. O paralelismo foi limitado a quatro threads, com uma inicialização sequencial no MDS.
+
+**Limitação do MDS:** o ajuste atingiu o limite de 300 iterações. Mais iterações ou outras inicializações podem mudar seu resultado; esta comparação usa a configuração declarada.
+
+Nesta execução, **t-SNE** apresentou a maior trustworthiness entre as configurações avaliadas. Essa medida avalia vizinhanças, não a separação de classes nem a acurácia de um classificador.
+
+Foram criadas visualizações t-SNE com cores, **180 anotações numéricas** e **100 miniaturas**, escolhidas com uma distância mínima entre anotações para reduzir a sobreposição.
+
+![Comparação de t-SNE, PCA, LLE e MDS](images/exercicio_10/comparacao_metodos.png)
+
+![Miniaturas do MNIST na projeção t-SNE](images/exercicio_10/tsne_miniaturas.png)
+
+Outras figuras: [dispersão t-SNE](images/exercicio_10/tsne_dispersao.png) e [anotações numéricas](images/exercicio_10/tsne_numeros.png).
+
+**Interpretação:** o t-SNE enfatiza relações locais; não devemos interpretar diretamente distâncias entre grupos ou seus tamanhos como propriedades do espaço original. A projeção PCA em duas dimensões pode descartar muita variância. LLE e MDS preservam outros aspectos geométricos e não foram projetados para separar as dez classes. A escolha do método deve considerar o objetivo da visualização, sua qualidade e seu custo.
+
+### Leitura dos gráficos desta execução
+
+O t-SNE mostrou grupos mais distinguíveis visualmente, embora ainda existam misturas, como entre 4 e 9 e entre 3 e 5. As miniaturas permitem inspecionar estilos de escrita e exemplos que aparecem próximos de outras classes.
+
+No PCA e no MDS, várias cores se sobrepõem intensamente. No LLE, alguns grupos aparecem em braços alongados, mas há forte mistura na região central. Portanto, nesta configuração, o t-SNE foi a opção mais informativa para explorar visualmente as classes. Essa observação visual é compatível com sua maior trustworthiness, mas as duas avaliações medem aspectos diferentes.
 </details>
 
 <details>
 <summary><strong>Resposta Oficial (Resumo)</strong></summary>
 
-A proposta é reduzir uma amostra do MNIST para 2D com t-SNE e visualizar como os dígitos se agrupam no espaço reduzido.
+O experimento do autor usa t-SNE para visualizar as primeiras 5.000 imagens do MNIST, colorindo os pontos por dígito ou mostrando números e miniaturas com controle de sobreposição. A comparação com PCA, LLE e MDS mostra grupos de dígitos mais distinguíveis no t-SNE nessa configuração. Ainda há sobreposição entre exemplos de classes diferentes; o método não usa os rótulos para construir a projeção. As figuras e medidas acima são os resultados executados neste projeto.
 </details>
