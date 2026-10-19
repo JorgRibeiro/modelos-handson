@@ -53,6 +53,15 @@ modelos-handson/
 │   ├── images/
 │   ├── Respostas.md
 │   └── README.md
+├── chapter-08/
+│   ├── 08_dimensionality_reduction.ipynb
+│   ├── 08_exercicio_9.ipynb
+│   ├── 08_exercicio_10.ipynb
+│   ├── images/
+│   │   ├── dim_reduction/
+│   │   └── exercicio_10/
+│   ├── Respostas.md
+│   └── README.md
 ├── ...
 ├── chapter-19/
 ├── requirements.txt
@@ -72,7 +81,7 @@ modelos-handson/
 | [05](chapter-05/README.md) | Support Vector Machines | SVMs para classificacao e regressao, margem larga, margem suave, escalonamento, kernels polinomiais/RBF, atributos de similaridade e ajuste de hiperparametros. | ✅ Concluido |
 | [06](chapter-06/README.md) | Decision Trees | Arvores de decisao para classificacao e regressao, visualizacao, probabilidades por folha, regularizacao, sensibilidade a rotacao, alta variancia e floresta manual por voto majoritario. | ✅ Concluido |
 | [07](chapter-07/README.md) | Ensemble Learning and Random Forests | Votacao, bagging, pasting, out-of-bag, Random Forests, importancia de atributos, boosting, gradient boosting e stacking. | ✅ Concluido |
-| [08](chapter-08/README.md) | Dimensionality Reduction | PCA, variancia explicada, compressao, PCA randomizado, PCA incremental, projecao aleatoria, LLE e Kernel PCA. | ✅ Notebook estruturado; exercicios pendentes |
+| [08](chapter-08/README.md) | Dimensionality Reduction | PCA, variancia explicada, compressao, PCA randomizado, PCA incremental, projecao aleatoria, LLE, Kernel PCA e comparacao de visualizacoes com t-SNE e MDS no MNIST. | ✅ Concluido |
 | [09](chapter-09/README.md) | Unsupervised Learning | Clustering, K-Means, segmentacao de imagens, aprendizado semissupervisionado, DBSCAN, misturas Gaussianas, deteccao de anomalias e modelos Bayesianos. | ✅ Notebook estruturado; exercicios pendentes |
 
 ### Parte II - Redes Neurais e Aprendizado Profundo
@@ -154,7 +163,9 @@ Cada pasta de capitulo pode conter:
 - Capitulo 4 implementado com treinamento de modelos lineares, metodos de gradiente, regularizacao, regressao logistica, Softmax e exercicio de Softmax do zero com NumPy. O resumo textual do exercicio 12 ainda precisa de revisao final.
 - Capitulo 5 concluido com SVMs para classificacao e regressao, comparacao entre implementacoes lineares, classificacao Wine e `SVR` no California Housing.
 - Capitulo 6 concluido com Arvores de Decisao, visualizacao, regularizacao, ajuste no conjunto moons e floresta manual com 1000 arvores por voto majoritario.
-- Capitulos 7 a 9 possuem notebooks principais estruturados, mas ainda aguardam revisao conceitual e exercicios completos.
+- Capitulo 7 concluido com ensembles, votacao, bagging, florestas aleatorias, boosting e stacking.
+- Capítulo 8 concluído com respostas conceituais revisadas e dois notebooks de exercícios executados. No MNIST, PCA reduziu 784 atributos para 154: acelerou o treino do SGD em 4,66 vezes, com pequena queda de acurácia, e tornou o treino da floresta mais lento. Na visualização de 5.000 imagens, t-SNE apresentou grupos mais distinguíveis e maior preservação de vizinhanças entre as configurações avaliadas. Resultados e figuras estão em [Respostas.md](chapter-08/Respostas.md).
+- Capitulo 9 possui notebook principal estruturado, mas ainda aguarda revisao conceitual e exercicios completos.
 - Capitulos 10 a 19 permanecem planejados para revisao e consolidacao progressiva.
 
 ## Agente de Aprendizado
@@ -165,4 +176,4 @@ Este repositorio conta com um agente de orientacao personalizado (`.agent.md`) p
 
 Este repositorio segue a licenca do material original e serve a propositos educacionais.
 
-**Ultima atualizacao geral**: 24 de maio de 2026
+**Última atualização geral**: 19 de outubro de 2026
